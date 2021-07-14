@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         $data = User::all();
 
-        return response()->json($data);
+        return response()->json($data, 200);
     }
 
     /**
@@ -27,7 +27,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $registro = User::create($data);
+
+        return $this->show($registro->id);
     }
 
     /**
@@ -38,7 +42,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return response()->json('FUNCTION SHOW');
+        $data = User::where('id', $id)
+            ->first();
+
+        return response()->json($data, 200);
     }
 
     /**
@@ -50,7 +57,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $registro = User::find($id);
+        $registro->update($data);
+        $registro->save();
+
+        return $this->show($id);
     }
 
     /**
@@ -61,6 +74,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $registro = User::find($id);
+        $registro->delete();
+
+        return response()->json('Success', 200);
     }
 }
