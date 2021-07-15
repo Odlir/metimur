@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-    <link rel="stylesheet" type="text/css" href="../assets/plugins/global/plugins.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/global/plugins.bundle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.bundle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
     <!--
     <link href="assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
