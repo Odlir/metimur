@@ -380,16 +380,42 @@
                 </div>
             </div>
 
-            {{----}}
-                @yield('categorias')
-                @yield('empresas')
-                @yield('encuestas')
-                @yield('industrias')
-                @yield('naturaleza')
-                @yield('personas')
-                @yield('roles')
-                @yield('tipo_documento')
-                @yield('tipo_evaluacion')
+            {{--mantenimientos--}}
+            @yield('categorias')
+            @yield('empresas')
+            @yield('encuestas')
+            @yield('industrias')
+            @yield('naturaleza')
+            @yield('personas')
+            @yield('roles')
+            @yield('tipo_documento')
+            @yield('tipo_evaluacion')
+
+            {{--REPORTES - CULTURA --}}
+            @yield('reporte_area_encuesta')
+            @yield('reporte_generales')
+            @yield('reporte_grandes_areas')
+            @yield('reporte_preguntas')
+            @yield('reporte_preguntas_especificas')
+            @yield('reporte_semaforo_area_encuesta')
+            {{--REPORTES - PERSONAS --}}
+            @yield('reporte_benckmarking_externo')
+            @yield('reporte_competencia_general')
+            @yield('reporte_cruzado_personas')
+            @yield('reporte_cruzado_preguntas')
+            @yield('reporte_cultura_liderazgo')
+            @yield('reporte_desagregado')
+            @yield('reporte_desagrado_consultor')
+            @yield('reporte_equipos')
+            @yield('reporte_genereales')
+            @yield('reporte_personas_rango')
+            @yield('reporte_rangos')
+            @yield('reporte_seccion_dinamica')
+            @yield('reporte_seccion_encuesta')
+            @yield('reporte_seguimiento')
+            @yield('reporte_tipo_personas')
+            @yield('reporte_top_bottom')
+
 
             <div id="kt_content" class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                 <div id="kt_subheader" class="kt-subheader kt-grid__item">
