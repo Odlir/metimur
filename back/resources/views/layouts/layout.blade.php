@@ -380,8 +380,16 @@
                 </div>
             </div>
 
-            // integrar categoria
-            @yield('categorias') -> @section('categorias')
+            {{----}}
+                @yield('categorias')
+                @yield('empresas')
+                @yield('encuestas')
+                @yield('industrias')
+                @yield('naturaleza')
+                @yield('personas')
+                @yield('roles')
+                @yield('tipo_documento')
+                @yield('tipo_evaluacion')
 
             <div id="kt_content" class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                 <div id="kt_subheader" class="kt-subheader kt-grid__item">
@@ -406,6 +414,7 @@
 <div id="kt_scrolltop" class="kt-scrolltop">
     <i class="fa fa-arrow-up"></i>
 </div>
+<script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
 <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
