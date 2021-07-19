@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Effectus Fischman | Dashboard</title>
+    <title>Effectus Fischman | Categorías</title>
     <meta charset="utf-8"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
     <link rel="stylesheet" type="text/css" href="assets/plugins/global/plugins.bundle.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/custom/datatables/datatables.bundle.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/base/light.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/menu/light.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/effectus/brand/dark.css" />
@@ -64,13 +65,13 @@
             <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
                 <div id="kt_aside_menu" class="kt-aside-menu" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
                     <ul class="kt-menu__nav">
-                        <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+                        <li class="kt-menu__item" aria-haspopup="true">
                             <a href="dashboard.html" class="kt-menu__link ">
                                 <i class="kt-menu__link-icon flaticon-home"></i>
                                 <span class="kt-menu__link-text">Dashboard</span>
                             </a>
                         </li>
-                        <li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                        <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                             <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                                 <i class="kt-menu__link-icon flaticon-edit"></i>
                                 <span class="kt-menu__link-text">Mantenimientos</span>
@@ -82,14 +83,14 @@
                                     <li class="kt-menu__item kt-menu__item--parent" aria-haspopup="true">
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Mantenimientos</span></span>
                                     </li>
-                                    <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="categorias.blade.php" class="kt-menu__link">
+                                    <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+                                        <a href="categorias.html" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Categorías</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="empresas.blade.php" class="kt-menu__link">
+                                        <a href="empresas.html" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Empresas</span>
                                         </a>
@@ -162,11 +163,11 @@
                         </li>
                         <li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                             <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                <i class="kt-menu__link-icon flaticon-graphic-1"></i>
-                                <span class="kt-menu__link-text">Reportes</span>
+                                <i class="kt-menu__link-icon flaticon-statistics"></i>
+                                <span class="kt-menu__link-text">Reporte</span>
                                 <i class="kt-menu__ver-arrow la la-angle-right"></i>
                             </a>
-                            <div class="kt-menu__submenu " style="display: none; overflow: hidden;" kt-hidden-height="240">
+                            <div class="kt-menu__submenu">
                                 <span class="kt-menu__arrow"></span>
                                 <ul class="kt-menu__subnav">
                                     <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
@@ -391,6 +392,31 @@
             @yield('tipo_documento')
             @yield('tipo_evaluacion')
 
+            {{--mantenimientos plus--}}
+            @yield('categorias_nuevo')
+            @yield('empresas_detalle')
+            @yield('empresas_nuevo')
+            @yield('empresas_nuevo_seccion')
+            @yield('encuesta_publica')
+            @yield('encuestas_detalle')
+            @yield('encuestas_editar_pregunta')
+            @yield('encuestas_nuevo')
+            @yield('industrias_nuevo')
+            @yield('naturaleza_nuevo')
+            @yield('personas_detalle')
+            @yield('personas_nuevo')
+            @yield('programar_encuesta_contacto_nuevo')
+            @yield('programar_encuesta_detalle')
+            @yield('programar_encuesta_detalle_cultura')
+            @yield('programar_encuesta_detalle_cultura_nueva_seccion')
+            @yield('programar_encuesta_nuevo')
+            @yield('roles_nuevo')
+            @yield('tipo_documento_nuevo')
+            @yield('tipo_evaluacion_nuevo')
+
+            {{--PROGRAMACION--}}
+            @yield('programar_encuesta')
+
             {{--REPORTES - CULTURA --}}
             @yield('reporte_area_encuesta')
             @yield('reporte_generales')
@@ -416,20 +442,7 @@
             @yield('reporte_tipo_personas')
             @yield('reporte_top_bottom')
 
-
-            <div id="kt_content" class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
-                <div id="kt_subheader" class="kt-subheader kt-grid__item">
-                    <div class="kt-container kt-container--fluid">
-                        <div class="kt-subheader__main">
-                            <h3 class="kt-subheader__title">Dashboard</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-
-                </div>
-            </div>
-            <div id="kt_footer" class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+            <div id="kt_footer" class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
                 <div class="kt-container kt-container--fluid">
                     <div class="kt-footer__copyright">2020&nbsp;&copy;&nbsp;Effectus Fischman Consultores</div>
                 </div>
@@ -440,9 +453,10 @@
 <div id="kt_scrolltop" class="kt-scrolltop">
     <i class="fa fa-arrow-up"></i>
 </div>
-<script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
 <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
+<script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/plugins/custom/tinymce/tinymce.bundle.js"></script>
 </body>
 </html>
