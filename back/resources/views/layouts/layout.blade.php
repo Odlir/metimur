@@ -84,55 +84,55 @@
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Mantenimientos</span></span>
                                     </li>
                                     <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
-                                        <a href="categorias.html" class="kt-menu__link">
+                                        <a href="categorias" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Categorías</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="empresas.html" class="kt-menu__link">
+                                        <a href="empresas" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Empresas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="encuestas.html" class="kt-menu__link">
+                                        <a href="encuestas" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Encuestas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="industrias.html" class="kt-menu__link">
+                                        <a href="industrias" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Industrias</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="naturaleza.html" class="kt-menu__link">
+                                        <a href="naturaleza" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Naturaleza</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="personas.html" class="kt-menu__link">
+                                        <a href="personas" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Personas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="roles.html" class="kt-menu__link">
+                                        <a href="roles" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Roles</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-documento.html" class="kt-menu__link">
+                                        <a href="tipo-documento" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Documento</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-evaluacion.html" class="kt-menu__link">
+                                        <a href="tipo-evaluacion" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Evaluación</span>
                                         </a>
@@ -153,7 +153,7 @@
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Programación</span></span>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="programar-encuesta.html" class="kt-menu__link">
+                                        <a href="programar-encuesta" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Encuestas</span>
                                         </a>
@@ -183,37 +183,37 @@
                                             <span class="kt-menu__arrow"></span>
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-generales.html" class="kt-menu__link">
+                                                    <a href="reporte-generales" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Generales</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-grandes-areas.html" class="kt-menu__link">
+                                                    <a href="reporte-grandes-areas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Grandes Áreas / Areas Específicas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-area-encuesta.html" class="kt-menu__link">
+                                                    <a href="reporte-area-encuesta" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Área de Encuesta</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-preguntas.html" class="kt-menu__link">
+                                                    <a href="reporte-preguntas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Preguntas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-preguntas-especificas.html" class="kt-menu__link">
+                                                    <a href="reporte-preguntas-especificas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Preguntas Específicas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="cultura/reporte-semaforo-area-encuesta.html" class="kt-menu__link">
+                                                    <a href="reporte-semaforo-area-encuesta" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Semáforo por Área de la Encuesta</span>
                                                     </a>
@@ -231,91 +231,91 @@
                                             <span class="kt-menu__arrow"></span>
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-generales.html" class="kt-menu__link">
+                                                    <a href="reporte-generales" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Generales</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-equipos.html" class="kt-menu__link">
+                                                    <a href="reporte-equipos" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">De Equipos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-seccion-encuesta.html" class="kt-menu__link">
+                                                    <a href="reporte-seccion-encuesta" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Seccion de Encuesta</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-rangos.html" class="kt-menu__link">
+                                                    <a href="reporte-rangos" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Rangos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-top-bottom.html" class="kt-menu__link">
+                                                    <a href="reporte-top-bottom" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Top/Bottom</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-seccion-dinamica.html" class="kt-menu__link">
+                                                    <a href="reporte-seccion-dinamica" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Sección Dinámica</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-seguimiento.html" class="kt-menu__link">
+                                                    <a href="reporte-seguimiento" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">De Seguimiento</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-desagregado.html" class="kt-menu__link">
+                                                    <a href="reporte-desagregado" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Desagregado</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-desagregado-consultor.html" class="kt-menu__link">
+                                                    <a href="reporte-desagregado-consultor" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Desagregado Consultor</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-tipo-personas.html" class="kt-menu__link">
+                                                    <a href="reporte-tipo-personas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia por Tipo de Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-liderazgo-rango.html" class="kt-menu__link">
+                                                    <a href="reporte-personas-rango" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia de Personas por Rangos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-competencia-general.html" class="kt-menu__link">
+                                                    <a href="reporte-competencia-general" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia Generales de Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-cruzado-personas.html" class="kt-menu__link">
+                                                    <a href="reporte-cruzado-personas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Cruzado por Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-cruzado-preguntas.html" class="kt-menu__link">
+                                                    <a href="reporte-cruzado-preguntas" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Cruzado por Preguntas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="personas/reporte-benckmarking-externo.html" class="kt-menu__link">
+                                                    <a href="reporte-benckmarking-externo" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Benchmarking Externo</span>
                                                     </a>
