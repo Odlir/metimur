@@ -1,10 +1,10 @@
 @extends('layouts.layout')
-@section('reporte_grandes_areas')
+@section('content')
                     <div id="kt_content" class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                         <div id="kt_subheader" class="kt-subheader kt-grid__item">
                             <div class="kt-container kt-container--fluid">
                                 <div class="kt-subheader__main">
-                                    <h3 class="kt-subheader__title">Reporte Grandes Areas / Areas Específicas</h3>
+                                    <h3 class="kt-subheader__title">Reportes Grandes Areas / Areas Específicas</h3>
                                 </div>
                             </div>
                         </div>

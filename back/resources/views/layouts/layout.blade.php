@@ -381,66 +381,8 @@
                 </div>
             </div>
 
-            {{--mantenimientos--}}
-            @yield('categorias')
-            @yield('empresas')
-            @yield('encuestas')
-            @yield('industrias')
-            @yield('naturaleza')
-            @yield('personas')
-            @yield('roles')
-            @yield('tipo_documento')
-            @yield('tipo_evaluacion')
-
-            {{--mantenimientos plus--}}
-            @yield('categorias_nuevo')
-            @yield('empresas_detalle')
-            @yield('empresas_nuevo')
-            @yield('empresas_nuevo_seccion')
-            @yield('encuesta_publica')
-            @yield('encuestas_detalle')
-            @yield('encuestas_editar_pregunta')
-            @yield('encuestas_nuevo')
-            @yield('industrias_nuevo')
-            @yield('naturaleza_nuevo')
-            @yield('personas_detalle')
-            @yield('personas_nuevo')
-            @yield('programar_encuesta_contacto_nuevo')
-            @yield('programar_encuesta_detalle')
-            @yield('programar_encuesta_detalle_cultura')
-            @yield('programar_encuesta_detalle_cultura_nueva_seccion')
-            @yield('programar_encuesta_nuevo')
-            @yield('roles_nuevo')
-            @yield('tipo_documento_nuevo')
-            @yield('tipo_evaluacion_nuevo')
-
-            {{--PROGRAMACION--}}
-            @yield('programar_encuesta')
-
-            {{--REPORTES - CULTURA --}}
-            @yield('reporte_area_encuesta')
-            @yield('reporte_generales')
-            @yield('reporte_grandes_areas')
-            @yield('reporte_preguntas')
-            @yield('reporte_preguntas_especificas')
-            @yield('reporte_semaforo_area_encuesta')
-            {{--REPORTES - PERSONAS --}}
-            @yield('reporte_benckmarking_externo')
-            @yield('reporte_competencia_general')
-            @yield('reporte_cruzado_personas')
-            @yield('reporte_cruzado_preguntas')
-            @yield('reporte_cultura_liderazgo')
-            @yield('reporte_desagregado')
-            @yield('reporte_desagrado_consultor')
-            @yield('reporte_equipos')
-            @yield('reporte_genereales')
-            @yield('reporte_personas_rango')
-            @yield('reporte_rangos')
-            @yield('reporte_seccion_dinamica')
-            @yield('reporte_seccion_encuesta')
-            @yield('reporte_seguimiento')
-            @yield('reporte_tipo_personas')
-            @yield('reporte_top_bottom')
+            {{--general--}}
+            @yield('content')
 
             <div id="kt_footer" class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
                 <div class="kt-container kt-container--fluid">

@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('industrias-nuevo');
+    return view('personas/reporte-rangos');
 });
 
-/*Route::get('/categorias-nuevo', function() {
-    return view('categorias-nuevo');
-});*/
+Route::get('/empresas-nuevo', function() {
+    return view('empresas-nuevo');
+});

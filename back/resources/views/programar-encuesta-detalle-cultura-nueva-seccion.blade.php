@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('programar_encuesta_detalle_cultura_nueva_seccion')
+@section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                         <div id="kt_subheader" class="kt-subheader kt-grid__item">
                             <div class="kt-container kt-container--fluid">
