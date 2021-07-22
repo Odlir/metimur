@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 /*MANTENIMIENTOS*/
 Route::get('/', function () {
-    return view('categorias');
+    return view('welcome');
 });
 
 Route::get('/categorias', function () {
@@ -182,3 +182,7 @@ Route::get('/tipo-evaluacion-nuevo', function () {
 Route::get('/programar-encuesta-nuevo', function () {
     return view('programar-encuesta-nuevo');
 });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
