@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@section('title', 'Reportes')
 @section('content')
 
     <div id="kt_content" class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">

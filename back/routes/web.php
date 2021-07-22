@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*MANTENIMIENTOS*/
 Route::get('/', function () {
     return view('categorias');
 });
@@ -57,7 +57,7 @@ Route::get('/programar-encuesta', function () {
     return view('programar-encuesta');
 });
 
-
+/*CULTURA*/
 
 Route::get('reporte-generales', function () {
     return view('cultura/reporte-generales');
@@ -82,6 +82,8 @@ Route::get('/reporte-preguntas-especificas', function () {
 Route::get('/reporte-semaforo-area-encuesta', function () {
     return view('cultura/reporte-semaforo-area-encuesta');
 });
+
+/*PERSONAS*/
 
 Route::get('/reporte-generales', function () {
     return view('personas/reporte-generales');
@@ -144,3 +146,39 @@ Route::get('/reporte-cultura-liderazgo', function () {
 });
 
 
+
+Route::get('/categorias-nuevo', function () {
+    return view('categorias-nuevo');
+});
+
+Route::get('/encuestas-nuevo', function () {
+    return view('encuestas-nuevo');
+});
+
+Route::get('/industrias-nuevo', function () {
+    return view('industrias-nuevo');
+});
+
+Route::get('/naturaleza-nuevo', function () {
+    return view('naturaleza-nuevo');
+});
+
+Route::get('/personas-nuevo', function () {
+    return view('personas-nuevo');
+});
+
+Route::get('/roles-nuevo', function () {
+    return view('roles-nuevo');
+});
+
+Route::get('/tipo-documento-nuevo', function () {
+    return view('tipo-documento-nuevo');
+});
+
+Route::get('/tipo-evaluacion-nuevo', function () {
+    return view('tipo-evaluacion-nuevo');
+});
+
+Route::get('/programar-encuesta-nuevo', function () {
+    return view('programar-encuesta-nuevo');
+});

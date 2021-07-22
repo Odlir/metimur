@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@section('title', 'Personas')
 @section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                         <div id="kt_subheader" class="kt-subheader kt-grid__item">
@@ -20,7 +21,7 @@
                                             <div class="kt-portlet__head-toolbar">
                                                 <div class="kt-portlet__head-wrapper">
                                                     <div class="kt-portlet__head-actions">
-                                                        <a href="personas-nuevo.html" class="btn btn-brand btn-icon-sm">
+                                                        <a href="personas-nuevo" class="btn btn-brand btn-icon-sm">
                                                             <i class="la la-plus"></i> <span class="kt-hidden-mobile">Nuevo Registro</span>
                                                         </a>
                                                         <a href="javascript:;" data-toggle="modal" data-target="#kt_modal_importar" class="btn btn-warning btn-icon-sm">
