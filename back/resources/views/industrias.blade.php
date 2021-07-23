@@ -68,14 +68,22 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
+                                                            <tbody>
+                                                                @foreach ($industrias as $ind)
+                                                                    <tr>
+                                                                        <th scope="row">{{$ind->id}}</th>
+                                                                        <td>{{$ind->industria_nombre}}</td>
+                                                                        <td>{{$ind->industria_usuario_modificacion_id}}</td>
+                                                                        <td>{{$ind->updated_at}}</td>
+                                                                        <td>{{$ind->industria_estado_id}}</td>
+                                                                        <td><a href="">Editar</a><a href="">Eliminar</a></td>
+                                                                  </tr>
+                                                                @endforeach
+                                                              
+                                                            </tbody>
                                                             <tfoot>
                                                                 <tr>
-                                                                    <th>ID</th>
-                                                                    <th>Nombre</th>
-                                                                    <th>Modificado Por</th>
-                                                                    <th>Última Modificación</th>
-                                                                    <th>Estado</th>
-                                                                    <th>Acciones</th>
+                                                                    
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
