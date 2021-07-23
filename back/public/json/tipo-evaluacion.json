@@ -1,0 +1,23 @@
+var dataJSON = [
+  {
+    "Id": "1",
+    "Nombre": "AUTOEVALUACIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "2",
+    "Nombre": "EVALUACIÓN 360",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "3",
+    "Nombre": "SIN EVALUADOS",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  }
+]

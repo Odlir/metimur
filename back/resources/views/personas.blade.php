@@ -119,6 +119,10 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-        <script type="text/javascript" src="json/personas.json"></script>
-        <script type="text/javascript" src="assets/js/personas.js"></script>
+                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
+                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
+                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+                    <script type="text/javascript" src="assets/js/app.js"></script>
+                    <script type="text/javascript" src="json/personas.json"></script>
+                    <script type="text/javascript" src="assets/js/personas.js"></script>
 @endsection

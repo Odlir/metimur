@@ -94,6 +94,10 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-        <script type="text/javascript" src="json/industrias.json"></script>
-        <script type="text/javascript" src="assets/js/industrias.js"></script>
+                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
+                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
+                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+                    <script type="text/javascript" src="assets/js/app.js"></script>
+                    <script type="text/javascript" src="json/industrias.json"></script>
+                    <script type="text/javascript" src="assets/js/industrias.js"></script>
 @endsection

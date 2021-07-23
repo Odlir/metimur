@@ -155,6 +155,11 @@ Route::get('/encuestas-nuevo', function () {
     return view('encuestas-nuevo');
 });
 
+Route::get('/empresas-nuevo', function () {
+    return view('empresas-nuevo');
+});
+
+
 Route::get('/industrias-nuevo', function () {
     return view('industrias-nuevo');
 });

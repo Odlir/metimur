@@ -93,6 +93,10 @@
     </div>
     </div>
 
+    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
+    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="json/categorias.json"></script>
     <script type="text/javascript" src="assets/js/categorias.js"></script>
 @endsection

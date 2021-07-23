@@ -1,0 +1,602 @@
+var dataJSON = [
+  {
+    "ID": "1",
+    "DATOS": "HEYSEN  ALFREDO",
+    "EMAIL": "aheysen@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "16/11/2017 - 23:47",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "2",
+    "DATOS": "OLIVERI SACO JULIO CESAR",
+    "EMAIL": "julio.oliveri@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "3",
+    "DATOS": "YAMASAKI ENDO VICTORIA",
+    "EMAIL": "victoria.yamasaki@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "4",
+    "DATOS": "DIAZ GONZALEZ MALENA ROXANA",
+    "EMAIL": "malena.diaz@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "5",
+    "DATOS": "LORA PHUN KIM KATIA",
+    "EMAIL": "kim.lora@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "6",
+    "DATOS": "ORTIZ SALAZAR ORLANDO IVAN",
+    "EMAIL": "orlando.ortiz@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "7",
+    "DATOS": "MATUTE DE HURTADO MARIA",
+    "EMAIL": "maricarmen.matute@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "8",
+    "DATOS": "CHACON SOUZA MARIA LUISA",
+    "EMAIL": "pamela.chacon@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "9",
+    "DATOS": "GUTIERREZ ROVEGNO MARIA CRISTINA",
+    "EMAIL": "maria.gutierrez@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "10",
+    "DATOS": "BIANCHINI AYESTA GIOVANNA",
+    "EMAIL": "giovanna.bianchini@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "11",
+    "DATOS": "JORGE AGUILAR MARIA DEL ROSARIO",
+    "EMAIL": "rosario.jorge@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "12",
+    "DATOS": "BENEL MORENO JEANETH MARGOT",
+    "EMAIL": "jeaneth.benel@demo.com",
+    "EMPRESA": "ANIXTER",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "13",
+    "DATOS": "VILLANUEVA CACERES MARIA VICTORIA",
+    "EMAIL": "maria.villanueva@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "14",
+    "DATOS": "MACEDO GUZMAN ISMAEL ISAAC",
+    "EMAIL": "ismael.macedo@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "15",
+    "DATOS": "YOMONA RUIZ EDITH ROSARIO",
+    "EMAIL": "edith.yomona@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "26/12/2013 - 12:30",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "16",
+    "DATOS": "OSSCO CALDERON VALENTINA",
+    "EMAIL": "valentina.ossco@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "17",
+    "DATOS": "VINGERHOETS MONTERO DIEGO",
+    "EMAIL": "diego.vingerhoets@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "18",
+    "DATOS": "VILLA LUZULA NATALIE IVONNE",
+    "EMAIL": "natalie.villa@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "19",
+    "DATOS": "ORTIZ GROSSO ANA ALEJANDRA",
+    "EMAIL": "ana.ortiz@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "20",
+    "DATOS": "REVOREDO DESCAILLEAUX JUAN",
+    "EMAIL": "jrevoredo@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/02/2019 - 21:39",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "21",
+    "DATOS": "DIOSES CHUMBES YESSENIA VERONICA",
+    "EMAIL": "yessenia.dioses@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "22",
+    "DATOS": "ARIAS ALLER ANTOINETTE",
+    "EMAIL": "antoinette.arias@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "23",
+    "DATOS": "MANRIQUE RODRIGUEZ WILLMAN ELOY",
+    "EMAIL": "willman.manrique@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "16/11/2015 - 20:56",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "24",
+    "DATOS": "RESTREPO VERNAZA CAROLINA",
+    "EMAIL": "carolina.restrepo@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "25",
+    "DATOS": "GUERRERO SANCHEZ MONICA PATRICIA",
+    "EMAIL": "monica.guerrero@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "26",
+    "DATOS": "LIENDO PINTO MARCO ANTONIO",
+    "EMAIL": "marco.liendo@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "27",
+    "DATOS": "CUBA ARMAS LUIS ALBERTO",
+    "EMAIL": "luis.cuba@demo.com",
+    "EMPRESA": "DETECIN",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "28",
+    "DATOS": "QUEA LAZO ANGEL MIGUEL EDUARDO",
+    "EMAIL": "angel.quea@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "29",
+    "DATOS": "CAJAL VILLAR JELLY SHEIDELLA",
+    "EMAIL": "jelly.cajal@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "30",
+    "DATOS": "UMPIRE ALVAREZ LUIS IVAN",
+    "EMAIL": "ivan.umpire@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "31",
+    "DATOS": "DUEÑAS MARTINO RYAN HUGO",
+    "EMAIL": "ryan.duenas@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "32",
+    "DATOS": "SILVA ANTON JULIO CESAR",
+    "EMAIL": "julio.silva@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "33",
+    "DATOS": "LEON BARDI CESAR AUGUSTO",
+    "EMAIL": "cesar.leon@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:28",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "34",
+    "DATOS": "GONZALES MORENO ANA MARIA",
+    "EMAIL": "ana.gonzales@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "35",
+    "DATOS": "MENDIOLA CABRERA MAGALI MELCHORA",
+    "EMAIL": "magali.mendiola@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:28",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "36",
+    "DATOS": "LOPEZ SOLOGUREN JOSE ALBERTO",
+    "EMAIL": "jose.lopez@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "37",
+    "DATOS": "CARBAJAL HERRERA JUAN CARLOS",
+    "EMAIL": "juan.carbajal@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "38",
+    "DATOS": "DUEÑAS CASTILLO NESTOR OMAR",
+    "EMAIL": "nestor.duenas@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "39",
+    "DATOS": "IPINCE MATTA CHRISTIAN",
+    "EMAIL": "christian.ipince@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "40",
+    "DATOS": "GRIMALDI TOCE ANA LUCIA",
+    "EMAIL": "ana.grimaldi@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "41",
+    "DATOS": "BANCALARI ARDITO DANIELA",
+    "EMAIL": "alida.bancalari@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "42",
+    "DATOS": "PURIZACA PALOMINO ANA MARIA",
+    "EMAIL": "anamaria.purizaca@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "43",
+    "DATOS": "HUERTA BUSTAMANTE YNDIRA MILUSKA",
+    "EMAIL": "yndira.huerta@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "44",
+    "DATOS": "CHAVEZ GUEVARA ROXANA ELIZABETH",
+    "EMAIL": "roxana.chavez@demo.com",
+    "EMPRESA": "IBT GROUP",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "45",
+    "DATOS": "SAVARESSE BERROCAL MARIA TERESA",
+    "EMAIL": "maria.savaresse@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "46",
+    "DATOS": "SALAZAR OBLITAS MARIA LAURA",
+    "EMAIL": "marialaura.salazar@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "47",
+    "DATOS": "GUPIOC NECOCHEA GERMAN JHONEL",
+    "EMAIL": "german.gupioc@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "48",
+    "DATOS": "ROCHA BEDOYA MARIA DEL CARMEN",
+    "EMAIL": "maria.rocha@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "49",
+    "DATOS": "CORZO SALDARRIAGA ROSARIO PATRICIA",
+    "EMAIL": "rosario.corzo@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "50",
+    "DATOS": "ABANTO FONSECA CARLA",
+    "EMAIL": "carla.abanto@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "12/07/2016 - 21:20",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "51",
+    "DATOS": "RODRIGUEZ PEREZ ABDUL ROBERTO",
+    "EMAIL": "abdul.rodriguez@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "52",
+    "DATOS": "MOTTA FLORES JUAN CARLOS",
+    "EMAIL": "juan.motta@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "11/07/2016 - 18:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "53",
+    "DATOS": "HUAMAN GORRITTI RUBEN MANUEL",
+    "EMAIL": "ruben.huaman@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "54",
+    "DATOS": "ARBULU LA TORRE RITA EMILIA",
+    "EMAIL": "rita.arbulu@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "55",
+    "DATOS": "SANTIBAÑEZ NEGRETE MARIA LUISA",
+    "EMAIL": "maria.santibanez@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "56",
+    "DATOS": "ROMERO RIVASPLATA LUCIANA LOURDES",
+    "EMAIL": "luciana.romero@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "57",
+    "DATOS": "NUÑEZ SORIA DAYSI CONSUELO",
+    "EMAIL": "daysi.nunez@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "58",
+    "DATOS": "FERRUCCI HIDALGO VICTORIA FIORELLA",
+    "EMAIL": "fiorella.ferrucci@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "59",
+    "DATOS": "ACOSTA JAIME FLOR",
+    "EMAIL": "flor.acosta@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "60",
+    "DATOS": "ESCALANTE CACERES MARIA EUGENIA",
+    "EMAIL": "maria.escalante@demo.com",
+    "EMPRESA": "TASA",
+    "ROL": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  }
+]

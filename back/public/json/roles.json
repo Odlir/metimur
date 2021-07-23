@@ -1,0 +1,23 @@
+var dataJSON = [
+  {
+    "ID": "1",
+    "NOMBRE": "SUPER ADMINISTRADOR",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "16/11/2017 - 23:47",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "2",
+    "NOMBRE": "ADMINISTRADOR",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "16/11/2017 - 23:47",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "3",
+    "NOMBRE": "USUARIO",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "16/11/2017 - 23:47",
+    "ESTADO": "Activo"
+  }
+]
