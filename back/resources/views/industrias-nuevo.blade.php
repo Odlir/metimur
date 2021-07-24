@@ -22,7 +22,7 @@
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
                                                         <div class="kt-portlet__head-actions">
-                                                            <a href="industrias.html" class="btn btn-clean kt-margin-r-10">
+                                                            <a href="industrias" class="btn btn-clean kt-margin-r-10">
                                                                 <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                             </a>
                                                             <button type="submit" class="btn btn-brand">
@@ -37,10 +37,10 @@
                                                     <div class="col-lg-8 form-group-sub">
                                                         <label>Nombre:</label>
                                                         <input id="txtNombre" name="txtNombre" type="text" class="form-control">
-                                                    
+
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class="col-lg-4 form-group-sub">
                                                         <label>Estado:</label>
                                                         <select id="cboEstado" name="cboEstado" class="form-control">

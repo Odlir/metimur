@@ -33,7 +33,7 @@
                                                     <div class="tab-pane active" id="kt_tabs_1_1" role="tabpanel">
                                                         <div class="row row kt-margin-b-35">
                                                             <div class="col-lg-12 kt-align-right">
-                                                                <a href="empresas.html" class="btn btn-clean kt-margin-r-10">
+                                                                <a href="empresas" class="btn btn-clean kt-margin-r-10">
                                                                     <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                                 </a>
                                                             </div>

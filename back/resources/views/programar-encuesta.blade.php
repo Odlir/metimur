@@ -21,7 +21,7 @@
                                             <div class="kt-portlet__head-toolbar">
                                                 <div class="kt-portlet__head-wrapper">
                                                     <div class="kt-portlet__head-actions">
-                                                        <a href="programar-encuesta-nuevo.html" class="btn btn-brand btn-icon-sm">
+                                                        <a href="programar-encuesta-nuevo" class="btn btn-brand btn-icon-sm">
                                                             <i class="la la-clock-o"></i> <span class="kt-hidden-mobile">Programar Encuesta</span>
                                                         </a>
                                                         <button id="btn-delete" class="btn btn-danger btn-icon-sm"><i class="flaticon-delete"></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>

@@ -22,7 +22,7 @@
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
                                                         <div class="kt-portlet__head-actions">
-                                                            <a href="programar-encuesta.html" class="btn btn-clean kt-margin-r-10">
+                                                            <a href="programar-encuesta" class="btn btn-clean kt-margin-r-10">
                                                                 <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                             </a>
                                                         </div>
@@ -238,7 +238,7 @@
                                                                     <h5>Nueva Sección</h5>
                                                                 </div>
                                                                 <div class="col-lg-6 kt-align-right">
-                                                                    <a href="programar-encuesta-detalle-cultura.html" class="btn btn-clean kt-margin-r-10">
+                                                                    <a href="programar-encuesta-detalle-cultura" class="btn btn-clean kt-margin-r-10">
                                                                         <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar a Secciones</span>
                                                                     </a>
                                                                     <button type="button" class="btn btn-brand">
