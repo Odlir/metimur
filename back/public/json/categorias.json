@@ -1,0 +1,177 @@
+var dataJSON = [
+  {
+    "Id": "1",
+    "Nombre": "AMBICIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "2",
+    "Nombre": "CLIMA EMPRESARIAL",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "3",
+    "Nombre": "COMUNICACIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "4",
+    "Nombre": "CULTURA",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "30/10/2017 - 20:38",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "5",
+    "Nombre": "DECISIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "6",
+    "Nombre": "EL LOGRO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "7",
+    "Nombre": "EQUIPOS",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "12/09/2013 - 20:26",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "8",
+    "Nombre": "ESPIRITUALIDAD",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/02/2016 - 21:40",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "9",
+    "Nombre": "EXITO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "10",
+    "Nombre": "FELICIDAD",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "11",
+    "Nombre": "INTELIGENCIA EMOCIONAL",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "30/09/2013 - 09:23",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "12",
+    "Nombre": "LIDERAZGO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "13",
+    "Nombre": "MOTIVACIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "14",
+    "Nombre": "OPORTUNIDAD",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "15",
+    "Nombre": "PERSEVERANCIA",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "16",
+    "Nombre": "PESIMISMO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "17",
+    "Nombre": "POTENCIAL",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "11/02/2015 - 21:13",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "18",
+    "Nombre": "PREFERENCIA DE TEMPERAMENTO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/04/2015 - 17:57",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "19",
+    "Nombre": "SALIR ADELANTE",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "20",
+    "Nombre": "SATISFACCIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "21",
+    "Nombre": "SUBCONSCIENTE",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "22",
+    "Nombre": "SUERTE",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "23",
+    "Nombre": "TALENTO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "24",
+    "Nombre": "TRABAJO EN EQUIPO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "25",
+    "Nombre": "VOLUNTAD",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  }
+]

@@ -1,0 +1,74 @@
+var dataJSONEvaluadas = [
+  {
+    "ID": "1",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G001",
+    "EVALUADOR_NOMBRE": "Alejandro Toledo Bahamondes",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "2",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G002",
+    "EVALUADOR_NOMBRE": "Cristian Vera Ross",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "3",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G003",
+    "EVALUADOR_NOMBRE": "María Elisa Cisternas Troncoso",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "4",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G004",
+    "EVALUADOR_NOMBRE": "Rodrigo Solarvincens Cruzat",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "5",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G005",
+    "EVALUADOR_NOMBRE": "Constantino Sidekaris Villalobos",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "6",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G006",
+    "EVALUADOR_NOMBRE": "Javier Gonzalez Foretic",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "7",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G007",
+    "EVALUADOR_NOMBRE": "Juan Carlos Munita Maturana",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 09:40"
+  },
+  {
+    "ID": "8",
+    "EVALUADO_CODIGO": "G100",
+    "EVALUADO_NOMBRE": "Andrés Tagle",
+    "EVALUADOR_CODIGO": "G100",
+    "EVALUADOR_NOMBRE": "Andrés Tagle",
+    "MODIFICADO_POR": "Alfredo Heysen",
+    "ULTIMA_MODIFICACION": "05/06/2013 - 02:21"
+  }
+]

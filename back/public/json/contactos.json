@@ -1,0 +1,52 @@
+var dataJSONContact = [
+  {
+    "ID": 1,
+    "CONTACTO": "James Butt",
+    "TELEFONO": "621-8927",
+    "CELULAR": "904-845-1427",
+    "EMAIL": "jbutt@gmail.com",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": 2,
+    "CONTACTO": "Josephine Darakjy",
+    "TELEFONO": "292-9388",
+    "CELULAR": "910-374-9840",
+    "EMAIL": "josephine_darakjy@darakjy.org",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": 3,
+    "CONTACTO": "Art Venere",
+    "TELEFONO": "636-8749",
+    "CELULAR": "956-264-4130",
+    "EMAIL": "art@venere.org",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": 4,
+    "CONTACTO": "Lenna Paprocki",
+    "TELEFONO": "385-4412",
+    "CELULAR": "907-921-2010",
+    "EMAIL": "lpaprocki@hotmail.com",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": 5,
+    "CONTACTO": "Donette Foller",
+    "TELEFONO": "570-1893",
+    "CELULAR": "913-549-4561",
+    "EMAIL": "donette.foller@cox.net",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "27/05/2013 - 07:44",
+    "ESTADO": "Activo"
+  }
+]

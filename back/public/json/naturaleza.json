@@ -1,0 +1,93 @@
+var dataJSON = [
+  {
+    "Id": "1",
+    "Nombre": "ASOCIACIONES",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "2",
+    "Nombre": "COLEGIO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Inactivo"
+  },
+  {
+    "Id": "3",
+    "Nombre": "COLEGIOS PROFESIONALES",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "4",
+    "Nombre": "EMBAJADAS",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "30/10/2017 - 20:38",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "5",
+    "Nombre": "EMPRESA PRIVADA",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "6",
+    "Nombre": "EMPRESA PUBLICA",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "7",
+    "Nombre": "GOBIERNO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "12/09/2013 - 20:26",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "8",
+    "Nombre": "INSTITUCIONES PÚBLICAS",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/02/2016 - 21:40",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "9",
+    "Nombre": "INSTITUTOS SUPERIORES DE EDUCACIÓN",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "10",
+    "Nombre": "ORGANISMO INTERNACIONAL",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "11",
+    "Nombre": "ORGANISMO NO GUBERNAMENTAL - ONG",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "30/09/2013 - 09:23",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "12",
+    "Nombre": "ORGANISMOS DESCENTRALIZADOS DEL ESTADO",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "14/11/2012 - 00:00",
+    "Estado": "Activo"
+  },
+  {
+    "Id": "13",
+    "Nombre": "UNIVERSIDADES",
+    "Modificado por": "JEMMY PORTURAS",
+    "Última modificación": "15/11/2012 - 00:00",
+    "Estado": "Activo"
+  }
+]

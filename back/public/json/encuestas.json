@@ -1,0 +1,392 @@
+var dataJSON = [
+  {
+    "ID": "1",
+    "TITULO": "Evaluación 180°",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "21/12/2013 - 11:26",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "2",
+    "TITULO": "Evaluación 180° - EWOS Chile",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "24/05/2013 - 01:46",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "3",
+    "TITULO": "Evaluación 180° - Fiscalia de Chile",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "13/06/2013 - 02:49",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "4",
+    "TITULO": "Medición de Liderazgo - Programa NOC",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "01/07/2013 - 22:37",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "5",
+    "TITULO": "Motivación Total",
+    "VERSION": "1",
+    "CATEGORIA": "Motivación",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "01/09/2013 - 23:07",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "6",
+    "TITULO": "Inteligencia Emocional",
+    "VERSION": "1",
+    "CATEGORIA": "Decisión",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "10/09/2013 - 16:51",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "7",
+    "TITULO": "Motivación Total",
+    "VERSION": "1",
+    "CATEGORIA": "Motivación",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "15/09/2013 - 19:43",
+    "ESTADO": "Inactivo"
+  },
+  {
+    "ID": "8",
+    "TITULO": "Equipos Directivos",
+    "VERSION": "1",
+    "CATEGORIA": "Equipos",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "26/03/2015 - 03:41",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "9",
+    "TITULO": "Inteligencia Emocional",
+    "VERSION": "1",
+    "CATEGORIA": "Inteligencia emocional",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "04/08/2014 - 00:58",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "10",
+    "TITULO": "Encuesta de Talentos, Temperamentos y Marca Personal",
+    "VERSION": "1",
+    "CATEGORIA": "Talento",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "08/01/2014 - 15:56",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "11",
+    "TITULO": "Prueba de intereses",
+    "VERSION": "1",
+    "CATEGORIA": "Talento",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "14/02/2014 - 15:41",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "12",
+    "TITULO": "Evaluación de 360 grados",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "11/04/2014 - 15:59",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "13",
+    "TITULO": "Evaluación 360 grados",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "11/04/2014 - 15:59",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "14",
+    "TITULO": "Evaluación de 360 grados",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "11/04/2014 - 16:28",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "15",
+    "TITULO": "Encuesta 360 - MINISTRO HALES",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "18/08/2014 - 16:05",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "16",
+    "TITULO": "Encuesta 360 - Liderazgo",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "18/05/2015 - 15:39",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "17",
+    "TITULO": "Test Temperamento",
+    "VERSION": "1",
+    "CATEGORIA": "Talentos",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "30/03/2015 - 17:10",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "18",
+    "TITULO": "El Capital de la Confianza",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación a Jefes",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "06/09/2014 - 00:16",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "19",
+    "TITULO": "Medición de Liderazgo - Graña y Montero",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación a Jefes",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "05/12/2014 - 02:22",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "20",
+    "TITULO": "Encuesta 360 - Cultura_Liderazgo",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "21",
+    "TITULO": "Encuesta 360 - Cultura_Liderazgo",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "20/12/2014 - 00:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "22",
+    "TITULO": "Encuesta Cultura Liderazgo - SPSA",
+    "VERSION": "1",
+    "CATEGORIA": "Potencial",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "11/02/2015 - 23:12",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "23",
+    "TITULO": "Equipos directivos de alto desempeño V2",
+    "VERSION": "1",
+    "CATEGORIA": "Equipos",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "10/03/2016 - 21:52",
+    "ESTADO": "Inactivo"
+  },
+  {
+    "ID": "24",
+    "TITULO": "Test de Temperamento",
+    "VERSION": "1",
+    "CATEGORIA": "Talentos",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "06/04/2015 - 22:37",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "25",
+    "TITULO": "PREFERENCIA DE TEMPERAMENTO - ADOLESCENTES",
+    "VERSION": "1",
+    "CATEGORIA": "Temperamento",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "04/06/2015 - 16:02",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "26",
+    "TITULO": "Encuesta Cultura_Liderazgo",
+    "VERSION": "1",
+    "CATEGORIA": "Potencial",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "06/05/2015 - 23:10",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "27",
+    "TITULO": "Encuesta Cultura_Liderazgo_Interbank",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "04/11/2015 - 21:58",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "28",
+    "TITULO": "Encuesta Cultura_Liderazgo_La Positiva",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "15/01/2016 - 16:05",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "29",
+    "TITULO": "Equipos Directivos de Alto Desempeño - VF",
+    "VERSION": "1",
+    "CATEGORIA": "Equipos",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "23/07/2015 - 21:29",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "30",
+    "TITULO": "Evaluación de Potencial_Interseguro",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "16/11/2015 - 17:21",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "31",
+    "TITULO": "Encuesta de Liderazgo 360",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "14/12/2015 - 04:28",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "32",
+    "TITULO": "Apoyo en Investigación",
+    "VERSION": "1",
+    "CATEGORIA": "Espiritualidad",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "17/02/2016 - 20:05",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "33",
+    "TITULO": "Encuesta Cultura Liderazgo Fuxion",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "23/02/2016 - 20:42",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "34",
+    "TITULO": "TEST TEMPERAMENTO",
+    "VERSION": "1",
+    "CATEGORIA": "Talentos",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "17/03/2016 - 01:26",
+    "ESTADO": "Inactivo"
+  },
+  {
+    "ID": "35",
+    "TITULO": "PREFERENCIA DE TEMPERAMENTO - ADOLESCENTES",
+    "VERSION": "1",
+    "CATEGORIA": "Temperamento",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "17/03/2016 - 01:26",
+    "ESTADO": "Inactivo"
+  },
+  {
+    "ID": "36",
+    "TITULO": "TEST TEMPERAMENTO",
+    "VERSION": "1",
+    "CATEGORIA": "Talentos",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "17/03/2016 - 01:32",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "37",
+    "TITULO": "PREFERENCIA DE TEMPERAMENTO - ADOLESCENTES",
+    "VERSION": "1",
+    "CATEGORIA": "Temperamento",
+    "TIPO": "Autoevaluación",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "11/04/2016 - 18:15",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "38",
+    "TITULO": "Encuesta Liderazgo Minsur",
+    "VERSION": "1",
+    "CATEGORIA": "Liderazgo",
+    "TIPO": "Evaluación 360",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "27/09/2016 - 20:32",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "39",
+    "TITULO": "Encuesta Motivación GyM",
+    "VERSION": "1",
+    "CATEGORIA": "Motivación",
+    "TIPO": "Evaluación a Colaboradores",
+    "MODIFICADO_POR": "Jemmy Porturas",
+    "ULTIMA_MODIFICACION": "24/04/2017 - 18:19",
+    "ESTADO": "Activo"
+  }
+]

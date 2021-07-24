@@ -1,0 +1,682 @@
+var dataJSON = [
+  {
+    "Id": "1",
+    "RUC": "20506228515",
+    "RAZON_SOCIAL": "AMBEV PERU",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "15/08/2013 - 13:33",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "2",
+    "RUC": "20515151515",
+    "RAZON_SOCIAL": "ANIXTER",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "2",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "17/02/2020 - 20:47",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "3",
+    "RUC": "20515151515",
+    "RAZON_SOCIAL": "BACKUS",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/04/2015 - 21:23",
+    "ESTADO": "Inactivo"
+  },
+  {
+    "Id": "4",
+    "RUC": "20122476309",
+    "RAZON_SOCIAL": "BANCO CENTRAL DE RESERVA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "11/02/2015 - 19:45",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "5",
+    "RUC": "20100053455",
+    "RAZON_SOCIAL": "BANCO INTERBANK",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "08/05/2015 - 14:37",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "6",
+    "RUC": "20100163552",
+    "RAZON_SOCIAL": "CIA MINERA RAURA S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "21/11/2017 - 00:46",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "7",
+    "RUC": "20429683581",
+    "RAZON_SOCIAL": "CINEPLANET",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "31/01/2014 - 15:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "8",
+    "RUC": "20100041953",
+    "RAZON_SOCIAL": "CLINICA INTERNACIONAL S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "0",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/05/2019 - 23:41",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "9",
+    "RUC": "20515151515",
+    "RAZON_SOCIAL": "CODELCO",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "15/07/2014 - 21:45",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "10",
+    "RUC": "20124088381",
+    "RAZON_SOCIAL": "COLEGIO ROOSEVELT",
+    "NATURALEZA": "Colegio",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "16/10/2013 - 09:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "11",
+    "RUC": "20269300141",
+    "RAZON_SOCIAL": "COLEGIO TRENER DE MONTERRICO S.A.",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/04/2015 - 17:35",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "12",
+    "RUC": "20136424867",
+    "RAZON_SOCIAL": "DERRAMA MAGISTERIAL",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "18/02/2019 - 17:49",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "13",
+    "RUC": "20546128424",
+    "RAZON_SOCIAL": "DSM MARINE LIPIDS PERU SAC",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "20/11/2018 - 14:58",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "14",
+    "RUC": "20100027705",
+    "RAZON_SOCIAL": "ELECTROPERU S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "19/08/2019 - 20:24",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "15",
+    "RUC": "13579246800",
+    "RAZON_SOCIAL": "EVALUACION",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/06/2016 - 15:49",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "16",
+    "RUC": "20521586134",
+    "RAZON_SOCIAL": "EVERIS PERU S.A.C.",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "26/03/2015 - 20:14",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "17",
+    "RUC": "20546205356",
+    "RAZON_SOCIAL": "FIMA SERVICIOS SA.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "13/09/2013 - 09:27",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "18",
+    "RUC": "20348067053",
+    "RAZON_SOCIAL": "FINANCIERA PROEMPRESA S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "14/12/2015 - 23:03",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "19",
+    "RUC": "20508668661",
+    "RAZON_SOCIAL": "FISCHMAN Y ASOCIADOS S.A.C",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "02/03/2015 - 23:12",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "20",
+    "RUC": "20513081236",
+    "RAZON_SOCIAL": "FUXION BIOTECH S.A.C.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "24/02/2016 - 20:32",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "21",
+    "RUC": "20524489300",
+    "RAZON_SOCIAL": "GLENCORE",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "23/01/2015 - 17:24",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "22",
+    "RUC": "20332600592",
+    "RAZON_SOCIAL": "GRAÑA Y MONTERO S.A.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/06/2013 - 21:34",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "23",
+    "RUC": "20100144922",
+    "RAZON_SOCIAL": "GRUPO PANA S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/05/2018 - 17:23",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "24",
+    "RUC": "20556281140",
+    "RAZON_SOCIAL": "IBT GROUP PERU",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "04/12/2019 - 18:10",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "25",
+    "RUC": "20291939083",
+    "RAZON_SOCIAL": "INKA CROPS S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "15/09/2017 - 23:03",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "26",
+    "RUC": "20338205261",
+    "RAZON_SOCIAL": "INTELIGO",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "23/01/2015 - 17:21",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "27",
+    "RUC": "20544794508",
+    "RAZON_SOCIAL": "INTERCORP",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "03/01/2019 - 15:49",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "28",
+    "RUC": "20382748566",
+    "RAZON_SOCIAL": "INTERSEGURO COMPAÑÍA DE SEGUROS S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "23/05/2013 - 15:52",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "29",
+    "RUC": "52087413698",
+    "RAZON_SOCIAL": "INVESTIGACION CASA ANDINA",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "16/10/2015 - 19:47",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "30",
+    "RUC": "10000958083",
+    "RAZON_SOCIAL": "INVESTIGACION CPPL",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "18/09/2015 - 22:55",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "31",
+    "RUC": "10005576399",
+    "RAZON_SOCIAL": "INVESTIGACION ERNST AND YOUNG",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/09/2015 - 20:59",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "32",
+    "RUC": "20202020202",
+    "RAZON_SOCIAL": "INVESTIGACION GYM",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "20/05/2015 - 16:19",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "33",
+    "RUC": "10005555555",
+    "RAZON_SOCIAL": "INVESTIGACION HOTEL LIBERTADOR",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "25/09/2015 - 23:02",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "34",
+    "RUC": "10414766308",
+    "RAZON_SOCIAL": "INVESTIGACION SODEXO",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "14/09/2015 - 23:16",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "35",
+    "RUC": "20100152941",
+    "RAZON_SOCIAL": "KIMBERLY CLARK PERÚ S.R.L.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "08/01/2014 - 17:17",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "36",
+    "RUC": "20100210909",
+    "RAZON_SOCIAL": "LA POSITIVA SEGUROS Y REASEGUROS",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/06/2015 - 15:36",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "37",
+    "RUC": "20100095450",
+    "RAZON_SOCIAL": "LAIVE S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "13/12/2016 - 16:05",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "38",
+    "RUC": "20510260040",
+    "RAZON_SOCIAL": "LAZO DE ROMAÑA Y GAGLIUFFI ABOGADOS",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "04/08/2015 - 14:56",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "39",
+    "RUC": "12345678911",
+    "RAZON_SOCIAL": "LINKEDIN",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "FIORELLA TAPIA",
+    "FECHA": "08/05/2015 - 17:54",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "40",
+    "RUC": "20601315051",
+    "RAZON_SOCIAL": "MALL AVENTURA SA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "12/04/2018 - 23:08",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "41",
+    "RUC": "20160286068",
+    "RAZON_SOCIAL": "MAQUINARIAS S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "09/08/2016 - 01:53",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "42",
+    "RUC": "20100006538",
+    "RAZON_SOCIAL": "MARCO PERUANA SA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "07/10/2016 - 21:50",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "43",
+    "RUC": "20508972734",
+    "RAZON_SOCIAL": "MARCOBRE S.A.C.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "21/11/2017 - 00:49",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "44",
+    "RUC": "20153408191",
+    "RAZON_SOCIAL": "MARINA DE GUERRA DEL PERU",
+    "NATURALEZA": "Instituciones Públicas",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/06/2016 - 19:50",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "45",
+    "RUC": "11111222222",
+    "RAZON_SOCIAL": "MEF INVESTIGACION",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "23/07/2015 - 20:35",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "46",
+    "RUC": "20131370998",
+    "RAZON_SOCIAL": "MINISTERIO DE EDUCACION",
+    "NATURALEZA": "Empresa Publica",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "18/05/2015 - 15:32",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "47",
+    "RUC": "20200136714",
+    "RAZON_SOCIAL": "MINSUR",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "15/09/2016 - 21:56",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "48",
+    "RUC": "20100136741",
+    "RAZON_SOCIAL": "MINSUR SA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "15/09/2016 - 22:02",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "49",
+    "RUC": "10000000001",
+    "RAZON_SOCIAL": "MUÑIZ LAW",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "23/01/2015 - 17:34",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "50",
+    "RUC": "20000000000",
+    "RAZON_SOCIAL": "NGR",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "20/12/2013 - 20:23",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "51",
+    "RUC": "20100175569",
+    "RAZON_SOCIAL": "PERUPLAST S.A.",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "17/03/2015 - 17:52",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "52",
+    "RUC": "20510398158",
+    "RAZON_SOCIAL": "PRIMA AFP S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "11/03/2016 - 15:30",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "53",
+    "RUC": "20100014395",
+    "RAZON_SOCIAL": "PRODUCTOS PARAISO DEL PERU S.A.C.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "25/09/2017 - 15:39",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "54",
+    "RUC": "20511315922",
+    "RAZON_SOCIAL": "REAL PLAZA SRL",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/04/2016 - 21:13",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "55",
+    "RUC": "20102078781",
+    "RAZON_SOCIAL": "SAN MARTIN CONTRATISTAS GENERALES S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "16/05/2018 - 17:48",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "56",
+    "RUC": "20553617627",
+    "RAZON_SOCIAL": "SERVICIO EDUCATIVO EMPRESARIAL S.A.C. - IPAE",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/04/2015 - 21:01",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "57",
+    "RUC": "20100082633",
+    "RAZON_SOCIAL": "SKF DEL PERU SA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "12/01/2018 - 18:28",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "58",
+    "RUC": "20269180731",
+    "RAZON_SOCIAL": "STATKRAFT PERU S.A.",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "10/05/2017 - 23:34",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "59",
+    "RUC": "20267073580",
+    "RAZON_SOCIAL": "SUPERINT. NAC. DE LOS REGISTROS PUBLICOS",
+    "NATURALEZA": "Gobierno",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/08/2017 - 23:42",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "60",
+    "RUC": "20100070970",
+    "RAZON_SOCIAL": "SUPERMERCADOS PERUANOS",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "12/09/2014 - 22:13",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "61",
+    "RUC": "20100070970",
+    "RAZON_SOCIAL": "SUPERMERCADOS PERUANOS S.A.",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "30/04/2015 - 22:37",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "62",
+    "RUC": "20171122001",
+    "RAZON_SOCIAL": "TABOCA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "22/11/2017 - 14:59",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "63",
+    "RUC": "20100971771",
+    "RAZON_SOCIAL": "TECNOLÓGICA DE ALIMENTOS S.A. TASA",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "10/12/2018 - 07:22",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "64",
+    "RUC": "20100971772",
+    "RAZON_SOCIAL": "TECNOLÓGICA DE ALIMENTOS S.A. TASA",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "10/12/2018 - 07:23",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "65",
+    "RUC": "20304050607",
+    "RAZON_SOCIAL": "TEMPERAMENTOS - TALENTOS",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "23/01/2015 - 04:14",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "66",
+    "RUC": "20507646051",
+    "RAZON_SOCIAL": "TERMINALES PORTUARIOS PERUANOS SAC",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "JEMMY PORTURAS",
+    "FECHA": "08/11/2017 - 23:17",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "67",
+    "RUC": "11111111100",
+    "RAZON_SOCIAL": "UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS",
+    "NATURALEZA": "Universidades",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "27/01/2015 - 05:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "Id": "68",
+    "RUC": "20462509236",
+    "RAZON_SOCIAL": "UTP",
+    "NATURALEZA": "Empresa Privada",
+    "CONTACTO": "1",
+    "MODIFICADO": "ANA ARRIETA",
+    "FECHA": "23/04/2014 - 19:49",
+    "ESTADO": "Activo"
+  }
+]

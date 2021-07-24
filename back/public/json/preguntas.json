@@ -1,0 +1,422 @@
+var dataPreguntasJSON = [
+  {
+    "ID": "1",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Se preocupa por las personas.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "2",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Reconoce a las personas por un trabajo bien hecho.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "3",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "*Sabe motivar a las personas",
+    "ORDEN": "3",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "4",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Hace que la gente se sienta valorada.",
+    "ORDEN": "4",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "5",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Sabe delegar el poder haciendo seguimiento cercano a proyectos e indicadores estratégicos.",
+    "ORDEN": "5",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "6",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Comunica claramente las expectativas que espera de los otros.",
+    "ORDEN": "6",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "7",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Valora la diversidad de genero",
+    "ORDEN": "7",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "8",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Se preocupa por el bienestar y trato justo con los contratistas",
+    "ORDEN": "8",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "9",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Actua con coherencia.",
+    "ORDEN": "9",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "10",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Ayuda a otros a desarrollarse personal y profesionalmente.",
+    "ORDEN": "10",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "11",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Es un líder presente y accesible para las personas que lo requieren.",
+    "ORDEN": "11",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "12",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Comunica claramente su estrategia y sabe alinear.",
+    "ORDEN": "12",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "13",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Lee su entorno y se da cuenta de las emociones de los demás.",
+    "ORDEN": "13",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "14",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Escucha y sabe ponerse en el lugar de otro.",
+    "ORDEN": "14",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "15",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Fomenta la horizontalidad en el trato con sus reportes directos",
+    "ORDEN": "15",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "16",
+    "SECCION": "ORIENTACIÓN A LAS PERSONAS- LIDERAZGO",
+    "PREGUNTA": "Energiza a otros a través de su estilo de liderazgo.",
+    "ORDEN": "16",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "17",
+    "SECCION": "TRABAJO EN EQUIPO",
+    "PREGUNTA": "Crea un ambiente de confianza y apertura.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "18",
+    "SECCION": "TRABAJO EN EQUIPO",
+    "PREGUNTA": "Fomenta el trabajo en equipo con otras áreas.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "19",
+    "SECCION": "TRABAJO EN EQUIPO",
+    "PREGUNTA": "Da retroalimentación sobre lo que está bien hecho y lo que puede mejorarse de forma asertiva.",
+    "ORDEN": "3",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "20",
+    "SECCION": "TRABAJO EN EQUIPO",
+    "PREGUNTA": "Piensa en lo mejor para la división aún si esto implica ir en contra de los intereses de su área.",
+    "ORDEN": "4",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "21",
+    "SECCION": "TRABAJO EN EQUIPO",
+    "PREGUNTA": "*Maneja bien las reuniones.",
+    "ORDEN": "5",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "22",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Acepta crítica y errores de forma adecuada.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "23",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Evita el pelambre y es directo con las personas.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "24",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "No abusa del poder formal que le da la compañía.",
+    "ORDEN": "3",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "25",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Regula sus emociones de forma adecuada.",
+    "ORDEN": "4",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "26",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Está abierto a escuchar otros puntos de vista diferentes a los suyos.",
+    "ORDEN": "5",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "27",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Busca seguir aprendiendo.",
+    "ORDEN": "6",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "28",
+    "SECCION": "COMO PERSONA",
+    "PREGUNTA": "Tiene iniciativa.",
+    "ORDEN": "7",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "29",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Es ágil en sus acciones y en la toma de decisiones.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "30",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Asigna adecuadamente herramientas y equipos para que la gente pueda hacer bien su trabajo.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "31",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Es organizado y planificado.",
+    "ORDEN": "3",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "32",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Es disciplinado.",
+    "ORDEN": "4",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "33",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Sabe priorizar.",
+    "ORDEN": "5",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "34",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Hace un buen seguimiento a sus proyectos.",
+    "ORDEN": "6",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "35",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Aplica la mejora continua de procesos en su trabajo.",
+    "ORDEN": "7",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "36",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Logra resultados.",
+    "ORDEN": "8",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "37",
+    "SECCION": "EXCELENCIA OPERACIONAL",
+    "PREGUNTA": "Su ttrabajo alcanza estándares competitivos a nivel mundial.",
+    "ORDEN": "9",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "38",
+    "SECCION": "SEGURIDAD",
+    "PREGUNTA": "Conoce y sigue rigurosamente las normas de seguridad.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "39",
+    "SECCION": "SEGURIDAD",
+    "PREGUNTA": "Se anticipa y alerta de posibles riesgos de seguridad en su trabajo y en el trabajo de los demás.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "40",
+    "SECCION": "SEGURIDAD",
+    "PREGUNTA": "La seguridad es un hábito que es parte de su vida.",
+    "ORDEN": "3",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "41",
+    "SECCION": "COMUNIDADES Y MEDIO AMBIENTE",
+    "PREGUNTA": "Se preocupa por el medio ambiente y es proactivo en cumplir o exceder las normas medio ambientales.",
+    "ORDEN": "1",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  },
+  {
+    "ID": "42",
+    "SECCION": "COMUNIDADES Y MEDIO AMBIENTE",
+    "PREGUNTA": "Trabaja para contribuir y dejar un legado para la comunidad.",
+    "ORDEN": "2",
+    "TIPO": "Opción única",
+    "MODIFICADO_POR": "JEMMY PORTURAS",
+    "ULTIMA_MODIFICACION": "19/12/2014 - 20:57",
+    "ESTADO": "Activo"
+  }
+]
