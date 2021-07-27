@@ -22,7 +22,7 @@
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
                                                         <div class="kt-portlet__head-actions">
-                                                            <a href="personas.html" class="btn btn-clean kt-margin-r-10">
+                                                            <a href="personas" class="btn btn-clean kt-margin-r-10">
                                                                 <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                             </a>
                                                             <button type="submit" class="btn btn-brand">

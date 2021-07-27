@@ -33,7 +33,7 @@
                                                     <div class="tab-pane active" id="kt_tabs_1_1" role="tabpanel">
                                                         <div class="row row kt-margin-b-35">
                                                             <div class="col-lg-12 kt-align-right">
-                                                                <a href="empresas.html" class="btn btn-clean kt-margin-r-10">
+                                                                <a href="empresas" class="btn btn-clean kt-margin-r-10">
                                                                     <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                                 </a>
                                                                 <button type="submit" class="btn btn-brand">
@@ -224,7 +224,7 @@
                                                         <form class="kt-form kt-form--fit">
                                                             <div class="row kt-margin-b-20">
                                                                 <div class="col-lg-12 kt-align-right">
-                                                                    <a href="empresas-nuevo-seccion.html" class="btn btn-brand btn-icon-sm">
+                                                                    <a href="empresas-nuevo-seccion" class="btn btn-brand btn-icon-sm">
                                                                         <i class="la la-plus"></i> <span class="kt-hidden-mobile">Nuevo Registro</span>
                                                                     </a>
                                                                     <button id="btn-delete-section" class="btn btn-danger btn-icon-sm"><i class="flaticon-delete"></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>

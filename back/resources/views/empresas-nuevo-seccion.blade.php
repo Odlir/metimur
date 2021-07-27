@@ -33,7 +33,7 @@
                                                     <div class="tab-pane" id="kt_tabs_1_1" role="tabpanel">
                                                         <div class="row row kt-margin-b-35">
                                                             <div class="col-lg-12 kt-align-right">
-                                                                <a href="empresas.html" class="btn btn-clean kt-margin-r-10">
+                                                                <a href="empresas" class="btn btn-clean kt-margin-r-10">
                                                                     <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                                 </a>
                                                                 <button type="submit" class="btn btn-brand">
@@ -227,7 +227,7 @@
                                                                     <div class="kt-section__title kt-pt10" style="margin:0">Nueva Sección</div>
                                                                 </div>
                                                                 <div class="col-lg-6 kt-align-right">
-                                                                    <a href="empresas-nuevo.html" class="btn btn-clean kt-margin-r-10">
+                                                                    <a href="empresas-nuevo" class="btn btn-clean kt-margin-r-10">
                                                                         <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                                     </a>
                                                                     <button id="btn-save-section" type="button" class="btn btn-brand">
