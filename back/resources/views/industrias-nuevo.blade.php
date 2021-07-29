@@ -10,7 +10,7 @@
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20">
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('industria.store')}}" method="POST">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="kt-portlet kt-portlet--mobile">
@@ -42,8 +42,8 @@
                                                         <label>Estado:</label>
                                                         <select id="cboEstado" name="cboEstado" class="form-control">
                                                             <option value="">SELECCIONAR</option>
-                                                            <option value="Activo">Activo</option>
-                                                            <option value="Inactivo">Inactivo</option>
+                                                            <option value="1">Activo</option>
+                                                            <option value="0">Inactivo</option>
                                                         </select>
                                                     </div>
                                                 </div>

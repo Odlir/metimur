@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\industria;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +31,9 @@ Route::get('/encuestas', function () {
 });
 
 Route::get('/industrias', function () {
-    return view('industrias');
-});
+    $industrias = industria::all();
+    return view('industrias',compact('industrias'));
+})->name('industrias.main');
 
 Route::get('/naturaleza', function () {
     return view('naturaleza');
