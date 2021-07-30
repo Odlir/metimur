@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 /*MANTENIMIENTOS*/
 Route::get('/', function () {
-    return view('categorias');
+    return view('index');
 });
 
 Route::get('/categorias', function () {

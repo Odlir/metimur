@@ -95,9 +95,11 @@ class UsuarioController extends Controller
         $credentials = request()->only('email','password');
         if(Auth::attempt($credentials)){
 
-            return 'Ha podido ingresar';
+            return redirect('/encuestas');
+
         }
-        return 'Usted noo puede ingresar';
+        return redirect('/');
+
 
     }
 }

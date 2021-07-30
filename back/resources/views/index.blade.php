@@ -34,18 +34,19 @@
                                     <h3 class="kt-login__title">Iniciara Sesión</h3>
                                 </div>
                                 <div class="kt-login__form">
-                                    <form id="frmLogin" class="kt-form" action="">
+                                    <form id="frmLogin" class="kt-form" method="POST" action="{{route('authenticate.auth')}}" >
+
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Usuario" name="usuario" autocomplete="off">
+                                            <input class="form-control" type="text" placeholder="Usuario" id="email" name="email"  autocomplete="off">
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control form-control-last" type="password" placeholder="Contraseña" name="password" autocomplete="off">
+                                            <input class="form-control form-control-last" type="password" placeholder="Contraseña" id="password" name="password"  autocomplete="off">
                                         </div>
                                         <div class="kt-align-center">
                                             <a href="javascript:;" id="kt_login_forgot">¿Olvidaste tu contraseña?</a>
                                         </div>
                                         <div class="kt-login__actions">
-                                            <button id="kt_login_signin_submit" class="btn btn-brand btn-pill btn-elevate">Ingresar</button>
+                                            <button {{--id="kt_login_signin_submit" --}}class="btn btn-brand btn-pill btn-elevate"  type="submit">Ingresar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -58,7 +59,7 @@
                                 <div class="kt-login__form">
                                     <form id="frmForgotPassword" class="kt-form" action="">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Correo Electrónico" name="email" id="email" autocomplete="off">
+                                            <input class="form-control" type="text" placeholder="Correo Electrónico" name="emailr" id="emailr" autocomplete="off">
                                         </div>
                                         <div class="kt-login__actions">
                                             <button id="kt_login_forgot_submit" class="btn btn-brand btn-pill btn-elevate">Solicitar</button>

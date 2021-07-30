@@ -24,6 +24,6 @@ Route::resource('user', UserController::class);
 
 
 Route::apiresource('usuario', UsuarioController::class);
-Route::post('authenticate', [UsuarioController::class, 'authenticate']);
+Route::post('authenticate', [UsuarioController::class, 'authenticate'])->name('authenticate.auth');
 
 
