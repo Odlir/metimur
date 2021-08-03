@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\industria;
+use App\Models\tipo_documento;
+use App\Models\tipo_evaluacion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +33,9 @@ Route::get('/encuestas', function () {
 });
 
 Route::get('/industrias', function () {
-    return view('industrias');
-});
+    $industrias = industria::paginate(10);
+    return view('industrias',compact('industrias'));
+})->name('industrias.main');
 
 Route::get('/naturaleza', function () {
     return view('naturaleza');
@@ -46,12 +50,14 @@ Route::get('/roles', function () {
 });
 
 Route::get('/tipo-documento', function () {
-    return view('tipo-documento');
-});
+    $tipo_documento = tipo_documento::all();
+    return view('tipo-documento',compact('tipo_documento'));
+})->name('tipo_documento.main');;
 
 Route::get('/tipo-evaluacion', function () {
-    return view('tipo-evaluacion');
-});
+    $tipo_evaluacion = tipo_evaluacion::all();
+    return view('tipo-evaluacion',compact('tipo_evaluacion'));
+})->name('tipo_evaluacion.main');
 
 Route::get('/programar-encuesta', function () {
     return view('programar-encuesta');
