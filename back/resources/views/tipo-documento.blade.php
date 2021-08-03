@@ -68,6 +68,19 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
+                                                            <tbody>
+                                                                @foreach ($tipo_documento as $item)
+                                                                    <tr>
+                                                                        <th scope="row">{{$item->id}}</th>
+                                                                        <td>{{$item->tipo_documento_nombre}}</td>
+                                                                        <td>{{$item->tipo_documento_usuario_modificacion_id}}</td>
+                                                                        <td>{{$item->updated_at}}</td>
+                                                                        <td>{{$item->tipo_documento_estado_id}}</td>
+                                                                        <td><a href="">Editar</a><a href="">Eliminar</a></td>
+                                                                  </tr>
+                                                                @endforeach
+                                                              
+                                                            </tbody>
                                                             <tfoot>
                                                                 <tr>
                                                                     <th>ID</th>

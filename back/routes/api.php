@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\IndustriaController;
+use App\Http\Controllers\TipoDocumentoController;
+use App\Http\Controllers\TipoEvaluacionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -38,3 +40,8 @@ Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])-
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
 
+Route::post('industrias/search', [IndustriaController::class,'search'])->name('industria.search');
+
+Route::resource('tipo_documento', TipoDocumentoController::class); 
+
+Route::resource('tipo_evaluacion', TipoEvaluacionController::class);

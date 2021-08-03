@@ -23,7 +23,7 @@ class IndustriaFactory extends Factory
     {
         return [
             'industria_nombre' => $this->faker->name(),
-            'industria_estado_id'=> $this->faker->randomElement([1,0]),
+            'industria_estado_id'=> $this->faker->randomElement(['Activo','Inactivo']),
             'created_at'=>now(),
             'updated_at'=>now()
         ];
