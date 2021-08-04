@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\NaturalezaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +41,7 @@ Route::post('industrias/store', [IndustriaController::class,'store'])->name('ind
 
 Route::get('industrias/{id}', [IndustriaController::class,'show'])->name('industria.show');
 
-Route::put('industrias/update', [IndustriaController::class,'update'])->name('industria.update');
+Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->name('industria.update');
 
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
 
@@ -52,3 +54,10 @@ Route::resource('tipo_documento', TipoDocumentoController::class);
 
 Route::resource('tipo_evaluacion', TipoEvaluacionController::class);
 
+
+// Rutas Categoria
+
+Route::apiresource('categoria', CategoriaController::class);
+
+// Rutas Naturaleza
+Route::apiresource('naturaleza', NaturalezaController::class);
