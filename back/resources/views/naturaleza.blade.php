@@ -68,6 +68,29 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
+                                                            <tbody>
+                                                            @foreach ($naturaleza as $naturaleza)
+                                                                <tr>
+                                                                    <th scope="row">{{$naturaleza->id}}</th>
+                                                                    <td>{{$naturaleza->naturaleza_nombre}}</td>
+                                                                    <td>{{$naturaleza->naturaleza_usuario_modificacion_id}}</td>
+                                                                    <td>{{$naturaleza->updated_at}}</td>
+                                                                    <td>{{$naturaleza->naturaleza_estado_id}}</td>
+
+                                                                    <td>
+                                                                        <a {{--href="{{route('categoria.edit' ,$categoria->id) }}"--}} >Editar</a>
+
+                                                                        <form  action="{{route('naturaleza.destroy', $naturaleza->id)}}" method="POST">
+                                                                            @csrf
+                                                                            @method('DELETE')
+                                                                            <input type="submit" value="Eliminar">
+                                                                        </form>
+
+                                                                    </td>
+                                                                </tr>
+                                                            @endforeach
+
+                                                            </tbody>
                                                             <tfoot>
                                                                 <tr>
                                                                     <th>ID</th>

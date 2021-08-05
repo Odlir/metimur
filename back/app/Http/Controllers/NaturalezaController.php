@@ -54,6 +54,12 @@ class NaturalezaController extends Controller
         $data = Naturaleza::where('id',$id)->first();
         return response()->json($data,200);
     }
+    public function edit($id)
+    {
+        $naturaleza=Naturaleza::findOrFail($id);
+        return view ("naturaleza-editar",compact("naturaleza"));
+
+    }
 
     /**
      * Update the specified resource in storage.

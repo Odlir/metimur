@@ -3,6 +3,8 @@
 use App\Models\industria;
 use App\Models\tipo_documento;
 use App\Models\tipo_evaluacion;
+use App\Models\categoria;
+use App\Models\naturaleza;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,8 +23,15 @@ Route::get('/', function () {
 });
 
 Route::get('/categorias', function () {
-    return view('categorias');
+    $categoria = categoria::all();
+    return view('categorias',compact('categoria'));
 });
+
+Route::get('/naturaleza', function () {
+    $naturaleza = naturaleza::all();
+    return view('naturaleza',compact('naturaleza'));
+});
+
 
 Route::get('/empresas', function () {
     return view('empresas');
@@ -33,14 +42,12 @@ Route::get('/encuestas', function () {
 });
 
 Route::get('/industrias', function () {
-    $industrias = industria::paginate(10);
-    return view('industrias',compact('industrias'));
+    $industria = industria::paginate(10);
+    return view('industrias',compact('industria'));
 })->name('industrias.main');
 
-Route::get('/naturaleza', function () {
-    return view('naturaleza');
-});
 
+//s
 Route::get('/personas', function () {
     return view('personas');
 });
@@ -193,3 +200,16 @@ Route::get('/tipo-evaluacion-nuevo', function () {
 Route::get('/programar-encuesta-nuevo', function () {
     return view('programar-encuesta-nuevo');
 });
+
+Route::get('/categorias-editar', function () {
+    return view('categorias-editar')->name('categorias.edit');
+});
+
+Route::get('/naturaleza-editar', function () {
+    return view('naturaleza-editar')->name('naturaleza.edit');
+});
+
+/*
+Route::resource('categoria', \App\Http\Controllers\CategoriaController::class);
+Route::resource('naturaleza', \App\Http\Controllers\NaturalezaController::class);*/
+

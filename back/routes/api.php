@@ -59,5 +59,10 @@ Route::resource('tipo_evaluacion', TipoEvaluacionController::class);
 
 Route::apiresource('categoria', CategoriaController::class);
 
+
+Route::get('edit/{id}', [CategoriaController::class,'edit'])->name('categoria.edit');
+
 // Rutas Naturaleza
 Route::apiresource('naturaleza', NaturalezaController::class);
+
+Route::get('naturaleza/edit/{id}', [NaturalezaController::class,'edit'])->name('naturaleza.edit');

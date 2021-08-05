@@ -52,8 +52,17 @@ class CategoriaController extends Controller
     {
         $data = Categoria::where('id',$id)->first();
         return response()->json($data,200);
+
     }
 
+
+    public function edit($id)
+    {
+        $categoria=Categoria::findOrFail($id);
+       return view ("categorias-editar",compact("categoria"));
+        /*return redirect('categorias-editar'. $categoria);*/
+
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -61,6 +70,7 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
         //validamos que tenga datos
@@ -75,7 +85,7 @@ class CategoriaController extends Controller
         $categoria->categoria_estado_id = $request->cboEstado;
         //lo guardamos
         $categoria->save();
-        return response()->json($categoria,200);
+        return redirect('/categorias');
     }
 
     /**

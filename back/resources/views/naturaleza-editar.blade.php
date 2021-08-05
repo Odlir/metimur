@@ -1,16 +1,16 @@
 @extends('layouts.layout')
-@section('title', 'Categorias')
+@section('title', 'Naturaleza')
 @section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                         <div id="kt_subheader" class="kt-subheader kt-grid__item">
                             <div class="kt-container kt-container--fluid">
                                 <div class="kt-subheader__main">
-                                    <h3 class="kt-subheader__title">Mantenimiento de Categorías</h3>
+                                    <h3 class="kt-subheader__title">Mantenimiento de Naturaleza</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('categoria.store')}}" method="POST">
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('naturaleza.store')}}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
@@ -23,7 +23,7 @@
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
                                                         <div class="kt-portlet__head-actions">
-                                                            <a href="categorias" class="btn btn-clean kt-margin-r-10">
+                                                            <a href="naturaleza" class="btn btn-clean kt-margin-r-10">
                                                                 <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                             </a>
                                                             <button type="submit" class="btn btn-brand">
@@ -93,7 +93,6 @@
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
 
@@ -103,10 +102,8 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-                   {{-- <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>--}}
-                    <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="json/categorias.json"></script>
-        <script type="text/javascript" src="assets/js/categorias.js"></script>
+
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="json/naturaleza.json"></script>
+        <script type="text/javascript" src="assets/js/naturaleza.js"></script>
 @endsection

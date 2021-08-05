@@ -69,7 +69,7 @@ class IndustriaController extends Controller
         //lo guardamos
         $industria->save();
         return response()->json($industria,200);
-        
+
     }
 
     /**
@@ -90,13 +90,13 @@ class IndustriaController extends Controller
         return redirect()->route('industrias.main');
     }
 
-    
+
     public function paginate(Request $request){
         //numero registro por pagina
         $limit = $request->limit;
         //pagina -1
         $offset = $request->offset;
-        
+
 
         $query = industria::offset($offset*$limit)->take($limit)->get();
         return response()->json($query,200);

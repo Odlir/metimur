@@ -6,19 +6,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/global/plugins.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/plugins/custom/datatables/datatables.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/base/light.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/menu/light.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/brand/dark.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/aside/dark.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/global/plugins.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/effectus/header/base/light.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/effectus/header/menu/light.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/effectus/brand/dark.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/effectus/aside/dark.css')}}" />
 </head>
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed">
     <div class="kt-header-mobile__logo">
         <a href="dashboard.html">
-            <img src="assets/media/logos/logo-responsive.png" alt="Effectus Fischman Consultores" />
+            <img src="{{ asset('assets/media/logos/logo-responsive.png')}}'" alt="Effectus Fischman Consultores" />
         </a>
     </div>
     <div class="kt-header-mobile__toolbar">
@@ -32,7 +32,7 @@
             <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                 <div class="kt-aside__brand-logo">
                     <a href="dashboard.html">
-                        <img src="assets/media/logos/logo-dark.png" alt="Effectus Fischman Consultores" />
+                        <img src="{{ asset('assets/media/logos/logo-dark.png')}}" alt="Effectus Fischman Consultores" />
                     </a>
                 </div>
                 <div class="kt-aside__brand-tools">
@@ -84,55 +84,55 @@
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Mantenimientos</span></span>
                                     </li>
                                     <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
-                                        <a href="categorias" class="kt-menu__link">
+                                        <a href="{{ asset('categorias')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Categorías</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="empresas" class="kt-menu__link">
+                                        <a href="{{ asset('empresas')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Empresas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="encuestas" class="kt-menu__link">
+                                        <a href="{{ asset('encuestas')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Encuestas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="industrias" class="kt-menu__link">
+                                        <a href="{{ asset('industrias')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Industrias</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="naturaleza" class="kt-menu__link">
+                                        <a href="{{ asset('naturaleza')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Naturaleza</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="personas" class="kt-menu__link">
+                                        <a href="{{ asset('personas')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Personas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="roles" class="kt-menu__link">
+                                        <a href="{{ asset('roles')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Roles</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-documento" class="kt-menu__link">
+                                        <a href="{{ asset('tipo-documento')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Documento</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-evaluacion" class="kt-menu__link">
+                                        <a href="{{ asset('tipo-evaluacion')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Evaluación</span>
                                         </a>
@@ -153,7 +153,7 @@
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Programación</span></span>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="programar-encuesta" class="kt-menu__link">
+                                        <a href="{{ asset('programar-encuesta')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Encuestas</span>
                                         </a>
@@ -183,37 +183,37 @@
                                             <span class="kt-menu__arrow"></span>
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-generales" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-generales')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Generales</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-grandes-areas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-grandes-areas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Grandes Áreas / Areas Específicas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-area-encuesta" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-area-encuesta')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Área de Encuesta</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-preguntas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-preguntas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Preguntas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-preguntas-especificas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-preguntas-especificas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Preguntas Específicas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-semaforo-area-encuesta" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-semaforo-area-encuesta')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Semáforo por Área de la Encuesta</span>
                                                     </a>
@@ -231,91 +231,91 @@
                                             <span class="kt-menu__arrow"></span>
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-generales" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-generales')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Generales</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-equipos" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-equipos')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">De Equipos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-seccion-encuesta" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-seccion-encuesta')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Seccion de Encuesta</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-rangos" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-rangos')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Rangos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-top-bottom" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-top-bottom')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Top/Bottom</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-seccion-dinamica" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-seccion-dinamica')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Por Sección Dinámica</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-seguimiento" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-seguimiento')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">De Seguimiento</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-desagregado" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-desagregado')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Desagregado</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-desagregado-consultor" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-desagregado-consultor')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Desagregado Consultor</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-tipo-personas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-tipo-personas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia por Tipo de Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-personas-rango" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-personas-rango')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia de Personas por Rangos</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-competencia-general" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-competencia-general')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Competencia Generales de Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-cruzado-personas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-cruzado-personas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Cruzado por Personas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-cruzado-preguntas" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-cruzado-preguntas')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Cruzado por Preguntas</span>
                                                     </a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true">
-                                                    <a href="reporte-benckmarking-externo" class="kt-menu__link">
+                                                    <a href="{{ asset('reporte-benckmarking-externo')}}" class="kt-menu__link">
                                                         <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                         <span class="kt-menu__link-text">Benchmarking Externo</span>
                                                     </a>
@@ -341,13 +341,13 @@
                             <div class="kt-header__topbar-user">
                                 <span class="kt-header__topbar-welcome kt-hidden-mobile">Bienvenido,</span>
                                 <span class="kt-header__topbar-username kt-hidden-mobile">Ricardo Oyola Leyton</span>
-                                <img src="assets/media/avatar.png" alt="">
+                                <img src="{{ asset('assets/media/avatar.png')}}" alt="">
                             </div>
                         </div>
                         <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                             <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(assets/media/bg/bg-banner-1.jpg)">
                                 <div class="kt-user-card__avatar">
-                                    <img src="assets/media/avatar.png" alt="">
+                                    <img src="{{ asset('assets/media/avatar.png')}}" alt="">
                                 </div>
                                 <div class="kt-user-card__name">Ricardo Oyola Leyton</div>
                             </div>

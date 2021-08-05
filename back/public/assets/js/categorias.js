@@ -1,6 +1,6 @@
 'use strict';
 var Categorias = function () {
-    var dataJSONArray = dataJSON;
+
     var handleDataTable = function () {
         var table = $('#kt_table').DataTable({
             language: {
@@ -8,18 +8,18 @@ var Categorias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            data: dataJSONArray,
-            columns: [
-                {data: 'Id', className: 'kt-align-center'},
-                {data: 'Nombre'},
-                {data: 'Modificado por'},
-                {data: 'Última modificación', className: 'kt-align-center'},
-                {data: 'Estado', className: 'kt-align-center'},
+
+        /*    columns: [
+                {data: 'id', className: 'kt-align-center'},
+                {data: 'categoria_nombre'},
+                {data: 'categoria_usuario_modificacion_id'},
+                {data: 'categoria_estado_id', className: 'kt-align-center'},
                 {data: 'Actions', className: 'kt-align-center', responsivePriority: -1},
-            ],
+                {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
+            ],*/
             order: [[1, 'asc']],
             headerCallback: function (thead, data, start, end, display) {
-                thead.getElementsByTagName('th')[0].innerHTML = '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="" class="kt-group-checkable"><span></span></label>';
+                thead.getElementsByTagName('th')[0].innerHTML = '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="" class="kt-group-checkable"  ><span></span></label>';
             },
             columnDefs: [
                 {
