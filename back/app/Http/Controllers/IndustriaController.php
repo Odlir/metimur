@@ -58,7 +58,7 @@ class IndustriaController extends Controller
     public function edit($id){
         $industria = industria::find($id);
         //return $industria;
-        return view('industria-edit',compact('industria')); 
+        return view('industria-edit',compact('industria'));
     }
 
     public function update(Request $request,$id)
@@ -75,7 +75,7 @@ class IndustriaController extends Controller
         $industria->industria_estado_id = $request->cboEstado;
         //lo guardamos
         $industria->save();
-        return redirect()->route('industrias.main');
+        return view('industrias');
         //return response()->json($industria,200);
         
     }

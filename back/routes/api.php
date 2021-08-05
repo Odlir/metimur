@@ -72,5 +72,5 @@ Route::get('tipo_documento_dt', [Datatable::class,'tipo_documento']);
 Route::get('tipo_evaluacion_dt', [Datatable::class,'tipo_evaluacion']);
 Route::get('naturalezas_dt', [Datatable::class,'naturaleza']);
 Route::get('categorias_dt', [Datatable::class,'categoria']);
-Route::get('industrias_dt', [Datatable::class,'industria2']);
+Route::get('industrias_dt', [Datatable::class,'industria']);
 

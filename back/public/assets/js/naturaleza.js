@@ -16,7 +16,7 @@ var Naturaleza = function () {
                 {data: 'naturaleza_usuario_modificacion_id'},
                 {data: 'updated_at', className: 'kt-align-center'},
                 {data: 'naturaleza_estado_id', className: 'kt-align-center'},
-                {data: 'Actions', className: 'kt-align-center', responsivePriority: -1},
+                {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
             ],
             order: [[1, 'asc']],
             headerCallback: function (thead, data, start, end, display) {
@@ -30,14 +30,6 @@ var Naturaleza = function () {
                     orderable: false,
                     render: function (data, type, full, meta) {
                         return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
-                    },
-                },
-                {
-                    targets: -1,
-                    title: 'Actions',
-                    orderable: false,
-                    render: function (data, type, full, meta) {
-                        return '<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a><a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>';
                     },
                 },
                 {

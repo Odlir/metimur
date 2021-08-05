@@ -6,19 +6,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/global/plugins.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/plugins/custom/datatables/datatables.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/base/light.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/header/menu/light.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/brand/dark.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/effectus/aside/dark.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/global/plugins.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/custom/datatables/datatables.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/header/base/light.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/header/menu/light.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/brand/dark.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/aside/dark.css')}}" />
 </head>
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed">
     <div class="kt-header-mobile__logo">
         <a href="dashboard.html">
-            <img src="assets/media/logos/logo-responsive.png" alt="Effectus Fischman Consultores" />
+            <img src="{{asset('assets/media/logos/logo-responsive.png')}}" alt="Effectus Fischman Consultores" />
         </a>
     </div>
     <div class="kt-header-mobile__toolbar">
@@ -32,7 +32,7 @@
             <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                 <div class="kt-aside__brand-logo">
                     <a href="dashboard.html">
-                        <img src="assets/media/logos/logo-dark.png" alt="Effectus Fischman Consultores" />
+                        <img src="{{asset('assets/media/logos/logo-dark.png')}}" alt="Effectus Fischman Consultores" />
                     </a>
                 </div>
                 <div class="kt-aside__brand-tools">
@@ -84,55 +84,55 @@
                                         <span class="kt-menu__link"><span class="kt-menu__link-text">Mantenimientos</span></span>
                                     </li>
                                     <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
-                                        <a href="categorias" class="kt-menu__link">
+                                        <a href="{{route('categorias.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Categorías</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="empresas" class="kt-menu__link">
+                                        <a href="{{route('empresas.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Empresas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="encuestas" class="kt-menu__link">
+                                        <a href="{{route('encuestas.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Encuestas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="industrias" class="kt-menu__link">
+                                        <a href="{{route('industrias.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Industrias</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="naturaleza" class="kt-menu__link">
+                                        <a href="{{route('naturaleza.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Naturaleza</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="personas" class="kt-menu__link">
+                                        <a href="{{route('personas.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Personas</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="roles" class="kt-menu__link">
+                                        <a href="{{route('roles.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Roles</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-documento" class="kt-menu__link">
+                                        <a href="{{route('tipo_documento.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Documento</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item" aria-haspopup="true">
-                                        <a href="tipo-evaluacion" class="kt-menu__link">
+                                        <a href="{{route('tipo_evaluacion.main')}}" class="kt-menu__link">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                             <span class="kt-menu__link-text">Tipo de Evaluación</span>
                                         </a>
@@ -341,13 +341,13 @@
                             <div class="kt-header__topbar-user">
                                 <span class="kt-header__topbar-welcome kt-hidden-mobile">Bienvenido,</span>
                                 <span class="kt-header__topbar-username kt-hidden-mobile">Ricardo Oyola Leyton</span>
-                                <img src="assets/media/avatar.png" alt="">
+                                <img src="{{asset('avatar')}}" alt="">
                             </div>
                         </div>
                         <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                             <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(assets/media/bg/bg-banner-1.jpg)">
                                 <div class="kt-user-card__avatar">
-                                    <img src="assets/media/avatar.png" alt="">
+                                    <img src="{{asset('assets/media/avatar.png')}}" alt="">
                                 </div>
                                 <div class="kt-user-card__name">Ricardo Oyola Leyton</div>
                             </div>

@@ -22,15 +22,15 @@ Route::get('/', function () {
 
 Route::get('/categorias', function () {
     return view('categorias');
-});
+})->name('categorias.main');
 
 Route::get('/empresas', function () {
     return view('empresas');
-});
+})->name('empresas.main');
 
 Route::get('/encuestas', function () {
     return view('encuestas');
-});
+})->name('encuestas.main');
 
 Route::get('/industrias', function () {
     $industrias = industria::paginate(10);
@@ -39,15 +39,15 @@ Route::get('/industrias', function () {
 
 Route::get('/naturaleza', function () {
     return view('naturaleza');
-});
+})->name('naturaleza.main');
 
 Route::get('/personas', function () {
     return view('personas');
-});
+})->name('personas.main');
 
 Route::get('/roles', function () {
     return view('roles');
-});
+})->name('roles.main');
 
 Route::get('/tipo-documento', function () {
     $tipo_documento = tipo_documento::all();
