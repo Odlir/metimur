@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\Datatable;
 use App\Http\Controllers\NaturalezaController;
 
 /*
@@ -45,6 +46,8 @@ Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->nam
 
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
 
+Route::get('industrias/{id}/edit', [IndustriaController::class,'edit'])->name('industria.edit');
+
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
 
@@ -61,3 +64,13 @@ Route::apiresource('categoria', CategoriaController::class);
 
 // Rutas Naturaleza
 Route::apiresource('naturaleza', NaturalezaController::class);
+
+
+//Datatable
+
+Route::get('tipo_documento_dt', [Datatable::class,'tipo_documento']);
+Route::get('tipo_evaluacion_dt', [Datatable::class,'tipo_evaluacion']);
+Route::get('naturalezas_dt', [Datatable::class,'naturaleza']);
+Route::get('categorias_dt', [Datatable::class,'categoria']);
+Route::get('industrias_dt', [Datatable::class,'industria2']);
+
