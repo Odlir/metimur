@@ -23,14 +23,14 @@ var Naturaleza = function () {
                         return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
                     },
                 },
-                {
+              /*  {
                     targets: -1,
                     title: 'Actions',
                     orderable: false,
                     render: function (data, type, full, meta) {
                         return '<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a><a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>';
                     },
-                },
+                },*/
                 {
                     targets: 4,
                     render: function (data, type, full, meta) {

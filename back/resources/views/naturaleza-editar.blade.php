@@ -10,8 +10,9 @@
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('naturaleza.store')}}" method="POST">
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('naturaleza.update',$naturaleza->id)}}" method="POST">
                                 @csrf
+                                @method('PUT')
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="kt-portlet kt-portlet--mobile">
@@ -37,12 +38,12 @@
                                                 <div class="form-group row">
                                                     <div class="col-lg-8 form-group-sub">
                                                         <label>Nombre:</label>
-                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control">
+                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{$naturaleza->naturaleza_nombre}}">
                                                     </div>
                                                     <div class="col-lg-4 form-group-sub">
                                                         <label>Estado:</label>
                                                         <select id="cboEstado" name="cboEstado" class="form-control">
-                                                            <option value="">SELECCIONAR</option>
+                                                            <option value="">{{$naturaleza->naturaleza_estado_id}}</option>
                                                             <option value="Activo">Activo</option>
                                                             <option value="Inactivo">Inactivo</option>
                                                         </select>

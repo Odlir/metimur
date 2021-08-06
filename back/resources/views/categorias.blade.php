@@ -78,13 +78,14 @@
                                                     <td>{{$categoria->categoria_estado_id}}</td>
 
                                                     <td>
-                                                        <a href="{{--{{route('categoria.edit' ,$categoria->id) }}--}}" >Editar</a>
-
-                                                        <form  action="{{route('categoria.destroy', $categoria->id)}}" method="POST">
+                                                        {{--<a href="{{route('categoria.edit' ,$categoria->id) }}" >Editar</a>--}}
+                                                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a>
+                                                        <a href="{{route('categoria.edit' ,$categoria->id) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>
+                                                       {{-- <form  action="{{route('categoria.destroy', $categoria->id)}}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
                                                             <input type="submit" value="Eliminar">
-                                                        </form>
+                                                        </form>--}}
 
                                                     </td>
                                                 </tr>

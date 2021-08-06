@@ -78,13 +78,14 @@
                                                                     <td>{{$naturaleza->naturaleza_estado_id}}</td>
 
                                                                     <td>
-                                                                        <a {{--href="{{route('categoria.edit' ,$categoria->id) }}"--}} >Editar</a>
+                                                                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a>
+                                                                        <a href="{{route('naturaleza.edit' ,$naturaleza->id) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>
 
-                                                                        <form  action="{{route('naturaleza.destroy', $naturaleza->id)}}" method="POST">
+                                                                      {{--  <form  action="{{route('naturaleza.destroy', $naturaleza->id)}}" method="POST">
                                                                             @csrf
                                                                             @method('DELETE')
                                                                             <input type="submit" value="Eliminar">
-                                                                        </form>
+                                                                        </form>--}}
 
                                                                     </td>
                                                                 </tr>
@@ -118,10 +119,10 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/app.js"></script>
-                    <script type="text/javascript" src="json/naturaleza.json"></script>
-                    <script type="text/javascript" src="assets/js/naturaleza.js"></script>
+                    <script type="text/javascript" src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
+              {{--      <script type="text/javascript" src="{{ asset('json/naturaleza.json') }}"></script>--}}
+                    <script type="text/javascript" src="{{ asset('assets/js/naturaleza.js') }}"></script>
 @endsection

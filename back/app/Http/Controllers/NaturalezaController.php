@@ -82,7 +82,7 @@ class NaturalezaController extends Controller
         $naturaleza->naturaleza_estado_id = $request->cboEstado;
         //lo guardamos
         $naturaleza->save();
-        return response()->json($naturaleza,200);
+        return redirect('/naturaleza');
     }
 
     /**
