@@ -84,9 +84,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+
         <!-- BEGIN:: MODAL IMPORTAR PREGUNTAS -->
         <div id="kt_modal_importar" class="modal fade" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">

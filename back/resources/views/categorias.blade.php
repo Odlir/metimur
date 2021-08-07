@@ -114,9 +114,7 @@
         </div>
     </div>
 
-    </div>
-    </div>
-    </div>
+
     <script type="text/javascript" src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
