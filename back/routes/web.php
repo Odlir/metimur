@@ -7,6 +7,8 @@ use App\Models\categoria;
 use App\Models\naturaleza;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UsuarioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -220,4 +222,7 @@ Route::get('/naturaleza-editar', function () {
 /*
 Route::resource('categoria', \App\Http\Controllers\CategoriaController::class);
 Route::resource('naturaleza', \App\Http\Controllers\NaturalezaController::class);*/
+
+Route::post('logout', [UsuarioController::class, 'logout'])->name('usuario.logout');
+
 

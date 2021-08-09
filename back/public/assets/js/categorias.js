@@ -121,7 +121,8 @@ var Categorias = function () {
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
                     'onClose': function (e) {
-                        $(window).attr('location', 'categorias.html');
+                        /*$(window).attr('location', 'categorias');*/
+                        location.href="/categorias";
                     }
                 });
                 return false;

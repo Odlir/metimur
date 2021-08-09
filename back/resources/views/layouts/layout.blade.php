@@ -373,7 +373,10 @@
                                     </div>
                                 </a>
                                 <div class="kt-notification__custom kt-space-between">
-                                    <a href="index.html" class="btn btn-label btn-label-brand btn-sm btn-bold">Cerrar Sesión</a>
+                                    <form  action="{{route('usuario.logout')}}" method="POST">
+                                        @csrf
+                                    <a href="#" class="btn btn-label btn-label-brand btn-sm btn-bold" onclick="this.closest('form').submit()">Cerrar Sesión</a>
+                                    </form>
                                 </div>
                             </div>
                         </div>

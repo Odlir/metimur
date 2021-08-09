@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/global/plugins.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/global/plugins.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.bundle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/login.css')}}" />
     <!--
     <link href="assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
@@ -26,7 +26,7 @@
                         <div class="kt-login__body">
                             <div class="kt-login__logo">
                                 <a href="index.html">
-                                    <img src="assets/media/logos/logo-light.png" alt="Effectus Fischman Consultores">
+                                    <img src="{{ asset('assets/media/logos/logo-light.png')}}" alt="Effectus Fischman Consultores">
                                 </a>
                             </div>
                             <div class="kt-login__signin">
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="kt-login__form">
                                     <form id="frmLogin" class="kt-form" method="POST" action="{{route('authenticate.auth')}}" >
-
+                                        @csrf
                                         <div class="form-group">
                                             <input class="form-control" type="text" placeholder="Usuario" id="email" name="email"  autocomplete="off">
                                         </div>
@@ -85,9 +85,10 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-<script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/login.js"></script>
+
+<script type="text/javascript" src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/login.js') }}"></script>
 </body>
 </html>

@@ -31,6 +31,7 @@ Route::resource('user', UserController::class);
 
 Route::apiresource('usuario', UsuarioController::class);
 Route::post('authenticate', [UsuarioController::class, 'authenticate'])->name('authenticate.auth');
+/*Route::post('logout', [UsuarioController::class, 'logout'])->name('usuario.logout');*/
 
 
 //Rutas de industria
