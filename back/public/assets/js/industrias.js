@@ -153,9 +153,10 @@ var Industrias = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
-                    'timer': 105000,
+                }).then(()=>{
+                    form.submit();
                 });
-                form.submit();
+                
             }
             /**
             submitHandler: function (form) {

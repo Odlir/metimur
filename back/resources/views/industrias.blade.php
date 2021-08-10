@@ -116,20 +116,14 @@
 
 
     <script type="text/javascript">
-
             $('.borrarAll').on('click', function(e) {
-            
-                var idsArray = []; //Variable tipo array
-            //selecciones todos los inputs tipo checkbox que tenga la clase delete_checkbox y que este seleccionado, es decir que tengan
-            //el atributo checked
+                var idsArray = [];
                 $("input[type=checkbox]:checked").each(function () {
                     idsArray.push($(this).attr('data-id'));
                 });
                 console.log(idsArray);
-
                 var unir_arrays_seleccionados = idsArray.join(",");
                 console.log(unir_arrays_seleccionados);
-            
                 if(idsArray.length > 0){
                     $.ajax({
                         url: $(this).data('url'),
@@ -138,22 +132,16 @@
                         data: 'ids=' + unir_arrays_seleccionados,
                         success: function (data) {
                             window.location.replace("http://127.0.0.1:8000/industrias");
-                            
                         },
                         error: function (data) {
                         alert(data.responseText);
-                        }
-                   
+                        }      
                     });
                     swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
                 }else{
                     swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
                 }
-            });
-
-            
- 
-        
+            });   
     </script>
 
 
