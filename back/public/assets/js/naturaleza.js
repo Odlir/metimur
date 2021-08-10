@@ -31,6 +31,13 @@ var Naturaleza = function () {
                     render: function (data, type, full, meta) {
                         return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
                     },
+                },{
+                    targets:3,
+                    render: function (data, type, full, meta) {
+                        data=data.replace("T"," ");
+                        data=data.replace(".000000Z"," ");
+                        return data;
+                    },
                 },
                 {
                     targets: 4,

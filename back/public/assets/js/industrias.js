@@ -29,7 +29,14 @@ var Industrias = function () {
                     className: 'dt-right',
                     orderable: false,
                     render: function (data, type, full, meta) {
-                        return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
+                        return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable delete_checkbox" data-id="'+data+'" id="'+data+'"><span></span></label>';
+                    },
+                },{
+                    targets:3,
+                    render: function (data, type, full, meta) {
+                        data=data.replace("T"," ");
+                        data=data.replace(".000000Z"," ");
+                        return data;
                     },
                 },
                 {
@@ -70,6 +77,7 @@ var Industrias = function () {
             if (checkbox == '') {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
+
                 var code = {ids: checkbox}
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
@@ -79,7 +87,39 @@ var Industrias = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
+                        var idsArray = [];
+                        $("input:checkbox[class=delete_checkbox]:checked").each(function () {
+                            idsArray.push($(this).attr('data-id'));
+                            console.log('object');
+                        });
+                        console.log(idsArray);
+                        var unir_arrays_seleccionados = idsArray.join(",");
+                        console.log(unir_arrays_seleccionados);
+                        return false;
+                        $.ajax({
+                            url: 'http://127.0.0.1:8000/api/industrias/deletemulti',
+                            type: 'DELETE',
+                            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                            data: 'ids=' + unir_arrays_seleccionados,
+                            success: function (data) {           
+                            
+                                if (data['msjtotal'] ) {
+                                $.each(idsArray,function(indice,id) {
+                                    var fila = $("#" + id).remove(); //Oculto las filas eliminadas
+                                    console.log('indice: ' + indice + ' - - ' + 'id:' + id);
+                                });
+                                    //alert(data['mensaje']);
+                                }else {
+                                    console.log('Error, no se Eliminaron las industrias .. ' + data['error']);
+                                }
+                            },
+                            error: function (data) {
+                                alert(data.responseText);
+                            }
+                   
+                        });
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        
                     }
                 });
             }
@@ -113,12 +153,24 @@ var Industrias = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
+                    'timer': 105000,
+                });
+                form.submit();
+            }
+            /**
+            submitHandler: function (form) {
+                swal.fire({
+                    'title': 'Exito',
+                    'text': 'Registro guardado correctamente',
+                    'type': 'success',
+                    'confirmButtonClass': 'btn btn-secondary',
                     'onClose': function (e) {
-                        $(window).attr('location', 'industrias.html');
+                        location.href="/industrias";
                     }
                 });
                 return false;
             }
+            */
         });
     };
     return {
@@ -133,3 +185,6 @@ var Industrias = function () {
 $(document).ready(function () {
     Industrias.init();
 });
+
+
+

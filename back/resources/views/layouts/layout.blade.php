@@ -13,6 +13,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/header/menu/light.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/brand/dark.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/effectus/aside/dark.css')}}" />
+
+
+    {{--head--}}
+    @yield('head')
+    
 </head>
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed">
@@ -341,7 +346,7 @@
                             <div class="kt-header__topbar-user">
                                 <span class="kt-header__topbar-welcome kt-hidden-mobile">Bienvenido,</span>
                                 <span class="kt-header__topbar-username kt-hidden-mobile">Ricardo Oyola Leyton</span>
-                                <img src="{{asset('avatar')}}" alt="">
+                                <img src="{{asset('assets/media/avatar.png')}}" alt="">
                             </div>
                         </div>
                         <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">

@@ -37,16 +37,12 @@ Route::post('authenticate', [UsuarioController::class, 'authenticate'])->name('a
 //Rutas de industria
 
 Route::get('industrias', [IndustriaController::class,'index'])->name('industria.index');
-
 Route::post('industrias/store', [IndustriaController::class,'store'])->name('industria.store');
-
 Route::get('industrias/{id}', [IndustriaController::class,'show'])->name('industria.show');
-
 Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->name('industria.update');
-
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
-
 Route::get('industrias/{id}/edit', [IndustriaController::class,'edit'])->name('industria.edit');
+Route::delete('industrias/deletemultiple', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
 
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
