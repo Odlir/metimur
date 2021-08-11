@@ -68,19 +68,7 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
-                                                                @foreach ($tipo_documento as $item)
-                                                                    <tr>
-                                                                        <th scope="row">{{$item->id}}</th>
-                                                                        <td>{{$item->tipo_documento_nombre}}</td>
-                                                                        <td>{{$item->tipo_documento_usuario_modificacion_id}}</td>
-                                                                        <td>{{$item->updated_at}}</td>
-                                                                        <td>{{$item->tipo_documento_estado_id}}</td>
-                                                                        <td><a href="">Editar</a><a href="">Eliminar</a></td>
-                                                                  </tr>
-                                                                @endforeach
-                                                              
-                                                            </tbody>
+
                                                             <tfoot>
                                                                 <tr>
                                                                     <th>ID</th>
@@ -101,17 +89,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/app.js"></script>
-                    <script type="text/javascript" src="json/tipo-documento.json"></script>
-                    <script type="text/javascript" src="assets/js/tipo-documento.js"></script>
+                    <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('json/tipo-documento.json')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/tipo-documento.js')}}"></script>
 
 @endsection

@@ -52,8 +52,6 @@ Route::get('/industrias', function () {
     return view('industrias',compact('industria'));
 })->name('industrias.main');
 
-
-//s
 Route::get('/personas', function () {
     return view('personas');
 })->name('personas.main');
@@ -65,12 +63,12 @@ Route::get('/roles', function () {
 Route::get('/tipo-documento', function () {
     $tipo_documento = tipo_documento::all();
     return view('tipo-documento',compact('tipo_documento'));
-})->name('tipo-documento.main');;
+})->name('tipo_documento.main');;
 
 Route::get('/tipo-evaluacion', function () {
     $tipo_evaluacion = tipo_evaluacion::all();
     return view('tipo-evaluacion',compact('tipo_evaluacion'));
-})->name('tipo-evaluacion.main');
+})->name('tipo_evaluacion.main');
 
 Route::get('/programar-encuesta', function () {
     return view('programar-encuesta');

@@ -68,6 +68,7 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
+
                                                             <tbody>
                                                                 @foreach ($tipo_evaluacion as $item)
                                                                     <tr>
@@ -105,10 +106,10 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/app.js"></script>
-                    <script type="text/javascript" src="json/tipo-evaluacion.json"></script>
-                    <script type="text/javascript" src="assets/js/tipo-evaluacion.js"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('json/tipo-evaluacion.json')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/tipo-evaluacion.js')}}"></script>
 @endsection

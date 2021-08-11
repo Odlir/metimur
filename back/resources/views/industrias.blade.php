@@ -1,4 +1,10 @@
 @extends('layouts.layout')
+
+@section('head')
+    <meta name="csrf-token" content="{{ csrf_token() }}"> <!----Creando mi Token --->
+@endsection
+
+
 @section('title', 'Industrias')
 @section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
@@ -24,7 +30,7 @@
                                                         <a href="industrias-nuevo" class="btn btn-brand btn-icon-sm">
                                                             <i class="la la-plus"></i> <span class="kt-hidden-mobile">Nuevo Registro</span>
                                                         </a>
-                                                        <button id="btn-delete" class="btn btn-danger btn-icon-sm"><i class="flaticon-delete"></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>
+                                                        <button id="btn-delete2" class="btn btn-danger btn-icon-sm borrarAll" data-url="{{ route('industria.destroyMultiple') }}"><i class="flaticon-delete" ></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -41,8 +47,8 @@
                                                         <label>Estado:</label>
                                                         <select id="indEstado" name="indEstado" class="form-control kt-select2" data-col-index="1">
                                                             <option value="">Todos</option>
-                                                            <option value="1">Activos</option>
-                                                            <option value="0">Inactivos</option>
+                                                            <option value="Activo">Activos</option>
+                                                            <option value="Inactivo">Inactivos</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3">
@@ -94,10 +100,48 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-                    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-                    <script type="text/javascript" src="assets/js/app.js"></script>
-                    <script type="text/javascript" src="json/industrias.json"></script>
-                    <script type="text/javascript" src="assets/js/industrias.js"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('json/industrias.json')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/industrias.js')}}"></script>
+
+
+    <script type="text/javascript">
+            $('.borrarAll').on('click', function(e) {
+                var idsArray = [];
+                $("input[type=checkbox]:checked").each(function () {
+                    idsArray.push($(this).attr('data-id'));
+                });
+                console.log(idsArray);
+                var unir_arrays_seleccionados = idsArray.join(",");
+                console.log(unir_arrays_seleccionados);
+                if(idsArray.length > 0){
+                    $.ajax({
+                        url: $(this).data('url'),
+                        type: 'DELETE',
+                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                        data: 'ids=' + unir_arrays_seleccionados,
+                        success: function (data) {
+                            window.location.replace("http://127.0.0.1:8000/industrias");
+                        },
+                        error: function (data) {
+                        alert(data.responseText);
+                        }
+                    });
+                    swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                }else{
+                    swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
+                }
+            });
+    </script>
+
+
+    @isset($totalE)
+    <script>
+        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+    </script>
+    @endisset
+
 @endsection

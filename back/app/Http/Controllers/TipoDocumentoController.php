@@ -59,7 +59,8 @@ class TipoDocumentoController extends Controller
         $tipo_documento->tipo_documento_nombre = $request->txtNombre;
         $tipo_documento->tipo_documento_estado_id = $request->cboEstado;
         $tipo_documento->save();
-        return response()->json($tipo_documento,200);
+        //return response()->json($tipo_documento,200);
+        return redirect()->route('tipo_documento.main');
         
     }
 
@@ -77,5 +78,10 @@ class TipoDocumentoController extends Controller
         }
         $tipo_documento->delete();
         return redirect()->route('tipo_documento.main');
+    }
+    public function edit($id){
+        $tipo_documento = tipo_documento::find($id);
+        //return $tipo_documento;
+        return view('tipo-documento-editar',compact('tipo_documento'));
     }
 }

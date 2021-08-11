@@ -62,8 +62,8 @@ class TipoEvaluacionController extends Controller
         $tipo_evaluacion->tipo_evaluacion_nombre = $request->txtNombre;
         $tipo_evaluacion->tipo_evaluacion_estado_id = $request->cboEstado;
         $tipo_evaluacion->save();
-        return response()->json($tipo_evaluacion,200);
-        
+        //return response()->json($tipo_evaluacion,200);
+        return redirect()->route('tipo_evaluacion.main');
     }
 
     /**
@@ -81,4 +81,11 @@ class TipoEvaluacionController extends Controller
         $tipo_evaluacion->delete();
         return redirect()->route('tipo_evaluacion.main');
     }
+
+    public function edit($id){
+        $tipo_evaluacion = tipo_evaluacion::find($id);
+        //return $tipo_evaluacion;
+        return view('tipo-evaluacion-editar',compact('tipo_evaluacion'));
+    }
+
 }

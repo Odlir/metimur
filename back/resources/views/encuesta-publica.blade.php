@@ -241,8 +241,10 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-        <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/tinymce/tinymce.bundle.js')}}"></script>
     </body>
 </html>

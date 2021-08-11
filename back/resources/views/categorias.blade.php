@@ -39,9 +39,9 @@
                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                         <label>Estado:</label>
                                         <select class="form-control kt-select2" data-col-index="1">
-                                            <option value="1">Todos</option>
-                                            <option value="2">Activos</option>
-                                            <option value="3">Inactivos</option>
+                                            <option value="">Todos</option>
+                                            <option value="Activo">Activos</option>
+                                            <option value="Inactivo">Inactivos</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-3">
@@ -68,31 +68,6 @@
                                                 <th>Acciones</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
-                                            @foreach ($categoria as $categoria)
-                                                <tr>
-                                                    <th scope="row">{{$categoria->id}}</th>
-                                                    <td>{{$categoria->categoria_nombre}}</td>
-                                                    <td>{{$categoria->categoria_usuario_modificacion_id}}</td>
-                                                    <td>{{$categoria->updated_at}}</td>
-                                                    <td>{{$categoria->categoria_estado_id}}</td>
-
-                                                    <td>
-                                                        {{--<a href="{{route('categoria.edit' ,$categoria->id) }}" >Editar</a>--}}
-                                                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a>
-                                                        <a href="{{route('categoria.edit' ,$categoria->id) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>
-                                                       {{-- <form  action="{{route('categoria.destroy', $categoria->id)}}" method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <input type="submit" value="Eliminar">
-                                                        </form>--}}
-
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-
-                                            </tbody>
-
                                             <tfoot>
                                             <tr>
                                                 <th>ID</th>
@@ -110,6 +85,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -121,4 +97,5 @@
     <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
      <script type="text/javascript" src="{{ asset('json/categorias.json') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/categorias.js') }}"></script>
+
 @endsection

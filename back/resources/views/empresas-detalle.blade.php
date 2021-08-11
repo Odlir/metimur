@@ -257,7 +257,11 @@
             <i class="fa fa-arrow-up"></i>
         </div>
 
-        <script type="text/javascript" src="json/empresas.json"></script>
-        <script type="text/javascript" src="json/contactos.json"></script>
-        <script type="text/javascript" src="assets/js/empresas.js"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('json/empresas.json')}}"></script>
+        <script type="text/javascript" src="{{asset('json/contactos.json')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/empresas.js')}}"></script>
 @endsection

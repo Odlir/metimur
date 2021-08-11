@@ -8,14 +8,15 @@ var Industrias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            data: dataJSONArray,
+            serverSide: true,
+	        ajax:"http://127.0.0.1:8000/api/industrias_dt",
             columns: [
-                {data: 'Id', className: 'kt-align-center'},
-                {data: 'Nombre'},
-                {data: 'Modificado por'},
-                {data: 'Última modificación', className: 'kt-align-center'},
-                {data: 'Estado', className: 'kt-align-center'},
-                {data: 'Actions', className: 'kt-align-center', responsivePriority: -1},
+                {data: 'id', className: 'kt-align-center'},
+                {data: 'industria_nombre'},
+                {data: 'industria_usuario_modificacion_id'},
+                {data: 'updated_at', className: 'kt-align-center'},
+                {data: 'industria_estado_id', className: 'kt-align-center'},
+                {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
             ],
             order: [[1, 'asc']],
             headerCallback: function (thead, data, start, end, display) {
@@ -28,24 +29,27 @@ var Industrias = function () {
                     className: 'dt-right',
                     orderable: false,
                     render: function (data, type, full, meta) {
-                        return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
+                        return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable delete_checkbox" data-id="'+data+'" id="'+data+'"><span></span></label>';
                     },
-                },
-                {
-                    targets: -1,
-                    title: 'Actions',
-                    orderable: false,
+                },{
+                    targets:3,
                     render: function (data, type, full, meta) {
-                        return '<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a><a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>';
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
+                        return data;
                     },
                 },
                 {
                     targets: 4,
                     render: function (data, type, full, meta) {
+                        console.log('data ',data);
                         var status = {
                             'Activo': {'class': ' kt-badge--success'},
                             'Inactivo': {'class': ' kt-badge--danger'}
                         };
+                        console.log('statusd ',status[data]);
                         return '<span class="kt-badge ' + status[data].class + ' kt-badge--inline kt-badge--pill">' + data + '</span>';
                     },
                 }
@@ -77,6 +81,7 @@ var Industrias = function () {
             if (checkbox == '') {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
+
                 var code = {ids: checkbox}
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
@@ -86,7 +91,39 @@ var Industrias = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
+                        var idsArray = [];
+                        $("input:checkbox[class=delete_checkbox]:checked").each(function () {
+                            idsArray.push($(this).attr('data-id'));
+                            console.log('object');
+                        });
+                        console.log(idsArray);
+                        var unir_arrays_seleccionados = idsArray.join(",");
+                        console.log(unir_arrays_seleccionados);
+                        return false;
+                        $.ajax({
+                            url: 'http://127.0.0.1:8000/api/industrias/deletemulti',
+                            type: 'DELETE',
+                            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                            data: 'ids=' + unir_arrays_seleccionados,
+                            success: function (data) {           
+                            
+                                if (data['msjtotal'] ) {
+                                $.each(idsArray,function(indice,id) {
+                                    var fila = $("#" + id).remove(); //Oculto las filas eliminadas
+                                    console.log('indice: ' + indice + ' - - ' + 'id:' + id);
+                                });
+                                    //alert(data['mensaje']);
+                                }else {
+                                    console.log('Error, no se Eliminaron las industrias .. ' + data['error']);
+                                }
+                            },
+                            error: function (data) {
+                                alert(data.responseText);
+                            }
+                   
+                        });
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        
                     }
                 });
             }
@@ -120,12 +157,25 @@ var Industrias = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
+                }).then(()=>{
+                    form.submit();
+                });
+                
+            }
+            /**
+            submitHandler: function (form) {
+                swal.fire({
+                    'title': 'Exito',
+                    'text': 'Registro guardado correctamente',
+                    'type': 'success',
+                    'confirmButtonClass': 'btn btn-secondary',
                     'onClose': function (e) {
-                        $(window).attr('location', 'industrias.html');
+                        location.href="/industrias";
                     }
                 });
                 return false;
             }
+            */
         });
     };
     return {
@@ -140,3 +190,6 @@ var Industrias = function () {
 $(document).ready(function () {
     Industrias.init();
 });
+
+
+

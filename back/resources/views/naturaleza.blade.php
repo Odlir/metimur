@@ -39,9 +39,9 @@
                                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Estado:</label>
                                                         <select class="form-control kt-select2" data-col-index="1">
-                                                            <option value="1">Todos</option>
-                                                            <option value="2">Activos</option>
-                                                            <option value="3">Inactivos</option>
+                                                            <option value="">Todos</option>
+                                                            <option value="Activo">Activos</option>
+                                                            <option value="Inactivo">Inactivos</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3">
@@ -68,30 +68,6 @@
                                                                     <th>Acciones</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
-                                                            @foreach ($naturaleza as $naturaleza)
-                                                                <tr>
-                                                                    <th scope="row">{{$naturaleza->id}}</th>
-                                                                    <td>{{$naturaleza->naturaleza_nombre}}</td>
-                                                                    <td>{{$naturaleza->naturaleza_usuario_modificacion_id}}</td>
-                                                                    <td>{{$naturaleza->updated_at}}</td>
-                                                                    <td>{{$naturaleza->naturaleza_estado_id}}</td>
-
-                                                                    <td>
-                                                                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a>
-                                                                        <a href="{{route('naturaleza.edit' ,$naturaleza->id) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>
-
-                                                                      {{--  <form  action="{{route('naturaleza.destroy', $naturaleza->id)}}" method="POST">
-                                                                            @csrf
-                                                                            @method('DELETE')
-                                                                            <input type="submit" value="Eliminar">
-                                                                        </form>--}}
-
-                                                                    </td>
-                                                                </tr>
-                                                            @endforeach
-
-                                                            </tbody>
                                                             <tfoot>
                                                                 <tr>
                                                                     <th>ID</th>
@@ -117,10 +93,10 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
-                    <script type="text/javascript" src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
-                    <script type="text/javascript" src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
-                    <script type="text/javascript" src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
-                    <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
-              {{--      <script type="text/javascript" src="{{ asset('json/naturaleza.json') }}"></script>--}}
-                    <script type="text/javascript" src="{{ asset('assets/js/naturaleza.js') }}"></script>
+                    <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+                    <script type="text/javascript" src="{{asset('json/naturaleza.json')}}"></script>
+                    <script type="text/javascript" src="{{asset('assets/js/naturaleza.js')}}"></script>
 @endsection

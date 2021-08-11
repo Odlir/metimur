@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\industria;
+use Illuminate\Support\Facades\DB;
+
 class IndustriaController extends Controller
 {
     public function index(Request $request)
@@ -54,6 +56,13 @@ class IndustriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function edit($id){
+        $industria = industria::find($id);
+        //return $industria;
+        return view('industria-edit',compact('industria'));
+    }
+
     public function update(Request $request,$id)
     {
         //validamos que tenga datos
@@ -68,7 +77,9 @@ class IndustriaController extends Controller
         $industria->industria_estado_id = $request->cboEstado;
         //lo guardamos
         $industria->save();
-        return response()->json($industria,200);
+
+        return redirect()->route('industrias.main');
+
 
     }
 
@@ -112,5 +123,19 @@ class IndustriaController extends Controller
         //return view('industrias',compact('industrias'));
         return redirect()->route('industrias.main',compact('industrias'));
     }
+
+
+
+    public function destroyMultiple(Request $request){
+        if($request->ajax()){
+            $ids = $request->ids;
+            $sql = DB::table("industrias")->whereIn('id',explode(",",$ids))->delete();
+
+            $totalE = industria::all()->count(); //Consulto la nueva Cantidad de Registros
+            return response()->json($totalE,200);
+
+        }
+    }
+
 }
 

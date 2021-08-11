@@ -10,9 +10,10 @@
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('naturaleza.update',$naturaleza->id)}}" method="POST">
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('naturaleza.update',$naturaleza)}}" method="POST">
                                 @csrf
-                                @method('PUT')
+                                {{--metodo put --}}
+                                @method('put')
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="kt-portlet kt-portlet--mobile">
@@ -38,14 +39,18 @@
                                                 <div class="form-group row">
                                                     <div class="col-lg-8 form-group-sub">
                                                         <label>Nombre:</label>
-                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{$naturaleza->naturaleza_nombre}}">
+
+                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{old('naturaleza_nombre',$naturaleza->naturaleza_nombre)}}">
                                                     </div>
                                                     <div class="col-lg-4 form-group-sub">
                                                         <label>Estado:</label>
                                                         <select id="cboEstado" name="cboEstado" class="form-control">
-                                                            <option value="">{{$naturaleza->naturaleza_estado_id}}</option>
-                                                            <option value="Activo">Activo</option>
-                                                            <option value="Inactivo">Inactivo</option>
+                                                            <option value="{{old('naturaleza_estado_id',$naturaleza->naturaleza_estado_id)}}">{{old('naturaleza_estado_id',$naturaleza->naturaleza_estado_id)}}</option>
+                                                            @if ($naturaleza->naturaleza_estado_id == 'Activo')
+                                                                <option value="Inactivo">Inactivo</option>
+                                                            @else
+                                                                <option value="Activo">Activo</option>
+                                                            @endif
                                                         </select>
                                                     </div>
                                                 </div>
@@ -101,8 +106,11 @@
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>
+        <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('json/naturaleza.json')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/naturaleza.js')}}"></script>
 
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="json/naturaleza.json"></script>
-        <script type="text/javascript" src="assets/js/naturaleza.js"></script>
 @endsection

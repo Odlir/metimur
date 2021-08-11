@@ -10,16 +10,21 @@
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('categoria.update',$categoria->id)}}" method="POST">
+
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('categoria.update',$categoria)}}" method="POST">
                                 @csrf
-                                @method('PUT')
+                                {{--metodo put --}}
+                                @method('put')
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="kt-portlet kt-portlet--mobile">
                                             <div class="kt-portlet__head kt-portlet__head--lg">
                                                 <div class="kt-portlet__head-label">
                                                     <span class="kt-portlet__head-icon"><i class="fa fa-check"></i></span>
+
                                                     <h3 class="kt-portlet__head-title">Actualizar Registro</h3>
+
                                                 </div>
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
@@ -38,14 +43,19 @@
                                                 <div class="form-group row">
                                                     <div class="col-lg-8 form-group-sub">
                                                         <label>Nombre:</label>
-                                                        <input id="txtNombre" name="txtNombre" type="text" value="{{$categoria->categoria_nombre}}" class="form-control">
+
+                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{old('categoria_nombre',$categoria->categoria_nombre)}}">
                                                     </div>
                                                     <div class="col-lg-4 form-group-sub">
                                                         <label>Estado:</label>
-                                                        <select id="cboEstado" name="cboEstado" class="form-control" >
-                                                            <option value="">{{$categoria->categoria_estado_id}}</option>
-                                                            <option value="Activo">Activo</option>
-                                                            <option value="Inactivo">Inactivo</option>
+                                                        <select id="cboEstado" name="cboEstado" class="form-control">
+                                                            <option value="{{old('categoria_estado_id',$categoria->categoria_estado_id)}}">{{old('categoria_estado_id',$categoria->categoria_estado_id)}}</option>
+                                                            @if ($categoria->categoria_estado_id == 'Activo')
+                                                                <option value="Inactivo">Inactivo</option>
+                                                            @else
+                                                                <option value="Activo">Activo</option>
+                                                            @endif
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -109,4 +119,5 @@
                     <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
                     <script type="text/javascript" src="{{ asset('json/categorias.json') }}"></script>
                     <script type="text/javascript" src="{{ asset('assets/js/categorias.js') }}"></script>
+
 @endsection

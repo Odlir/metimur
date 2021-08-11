@@ -8,14 +8,15 @@ var TipoDocumento = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            data: dataJSONArray,
+            serverSide: true,
+	        ajax:"http://127.0.0.1:8000/api/tipo_documento_dt",
             columns: [
-                {data: 'Id', className: 'kt-align-center'},
-                {data: 'Nombre'},
-                {data: 'Modificado por'},
-                {data: 'Última modificación', className: 'kt-align-center'},
-                {data: 'Estado', className: 'kt-align-center'},
-                {data: 'Actions', className: 'kt-align-center', responsivePriority: -1},
+                {data: 'id', className: 'kt-align-center'},
+                {data: 'tipo_documento_nombre'},
+                {data: 'tipo_documento_usuario_modificacion_id'},
+                {data: 'updated_at', className: 'kt-align-center'},
+                {data: 'tipo_documento_estado_id', className: 'kt-align-center'},
+                {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
             ],
             order: [[1, 'asc']],
             headerCallback: function (thead, data, start, end, display) {
@@ -30,13 +31,14 @@ var TipoDocumento = function () {
                     render: function (data, type, full, meta) {
                         return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
                     },
-                },
-                {
-                    targets: -1,
-                    title: 'Actions',
-                    orderable: false,
+                },{
+                    targets:3,
                     render: function (data, type, full, meta) {
-                        return '<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Detalle"><i class="fa fa-eye"></i></a><a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Editar"><i class="flaticon-edit"></i></a>';
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
+                        return data;
                     },
                 },
                 {
@@ -52,8 +54,11 @@ var TipoDocumento = function () {
             ],
         });
         table.on('change', '.kt-group-checkable', function () {
+            //console.log('se esta ejecutando');
             var set = $(this).closest('table').find('td:first-child .kt-checkable');
+            //console.log('set ',set);
             var checked = $(this).is(':checked');
+            //console.log(checked);
             $(set).each(function () {
                 if (checked) {
                     $(this).prop('checked', true);
@@ -65,6 +70,7 @@ var TipoDocumento = function () {
             });
         });
         table.on('change', 'tbody tr .kt-checkbox', function () {
+            console.log('segundo');
             $(this).parents('tr').toggleClass('active');
         });
     };
@@ -78,6 +84,7 @@ var TipoDocumento = function () {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
                 var code = {ids: checkbox}
+                console.log(code);
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
                     text: 'Recuerda que no podrás revertir esto.',
@@ -86,6 +93,7 @@ var TipoDocumento = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
+                        
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
                     }
                 });
@@ -120,11 +128,10 @@ var TipoDocumento = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
-                    'onClose': function (e) {
-                        $(window).attr('location', 'tipo-documento.html');
-                    }
+                }).then(()=>{
+                    form.submit();
                 });
-                return false;
+                
             }
         });
     };
