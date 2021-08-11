@@ -8,7 +8,6 @@ var Categorias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            serverSide: true,
 	        ajax:"http://127.0.0.1:8000/api/categorias_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -73,9 +72,13 @@ var Categorias = function () {
     var handleDelete = function () {
         $('#btn-delete').click(function () {
             $(this).addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
-            var checkbox = $('#kt_table tbody input:checkbox:checked').map(function () {
-                return $(this).val();
-            }).get();
+
+            //nuevo checkbox
+            var checkbox = [];
+            $("input:checked", $('#kt_table').dataTable().fnGetNodes()).each(function () {
+                checkbox.push($(this).val());
+            });
+
             if (checkbox == '') {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
@@ -88,7 +91,31 @@ var Categorias = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
-                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
+                        $.ajax(
+                            {
+                                url: 'http://127.0.0.1:8000/api/categoria_borrar',
+                                type: 'delete', 
+                                data: code, 
+                                dataType: 'json',
+                                success: function (response)
+                                {
+                                    //console.log(response); // see the reponse sent
+                                    $('#kt_table').DataTable().ajax.reload();
+                                    console.log('completo');
+                                    
+                                },
+                                error: function(xhr) {
+                                 console.log(xhr.responseText);
+                               }
+                        });
+                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success').then(()=>{
+                            //window.location.href='http://127.0.0.1:8000/categorias';
+                        });
                     }
                 });
             }

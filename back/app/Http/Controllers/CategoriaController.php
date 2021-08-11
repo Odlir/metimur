@@ -105,4 +105,16 @@ class CategoriaController extends Controller
         //return $industria;
         return view('categorias-editar',compact('categoria'));
     }
+
+    public function destroyMultiple(Request $request){
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $Categoria = Categoria::find($item);
+            $Categoria->delete();
+        }
+        return response()->json($Categoria,200);
+        //return redirect()->route('tipo_documento.main');
+    }
+
 }

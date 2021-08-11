@@ -127,14 +127,13 @@ class IndustriaController extends Controller
     
 
     public function destroyMultiple(Request $request){
-        if($request->ajax()){
-            $ids = $request->ids;
-            $sql = DB::table("industrias")->whereIn('id',explode(",",$ids))->delete(); 
-
-            $totalE = industria::all()->count(); //Consulto la nueva Cantidad de Registros
-            return response()->json($totalE,200); 
-             
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $industria = industria::find($item);
+            $industria->delete();
         }
+        return response()->json($industria,200);
     }
 
 }

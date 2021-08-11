@@ -1,4 +1,7 @@
 'use strict';
+
+const api = "{{ env('API_URL') }}";
+
 var TipoDocumento = function () {
     var dataJSONArray = dataJSON;
     var handleDataTable = function () {
@@ -8,7 +11,6 @@ var TipoDocumento = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            serverSide: true,
 	        ajax:"http://127.0.0.1:8000/api/tipo_documento_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -53,6 +55,7 @@ var TipoDocumento = function () {
                 }
             ],
         });
+        //guarda los check totales (activa/desactiva)
         table.on('change', '.kt-group-checkable', function () {
             //console.log('se esta ejecutando');
             var set = $(this).closest('table').find('td:first-child .kt-checkable');
@@ -69,6 +72,7 @@ var TipoDocumento = function () {
                 }
             });
         });
+        //guarda los check individuales
         table.on('change', 'tbody tr .kt-checkbox', function () {
             console.log('segundo');
             $(this).parents('tr').toggleClass('active');
@@ -76,15 +80,26 @@ var TipoDocumento = function () {
     };
     var handleDelete = function () {
         $('#btn-delete').click(function () {
+            
             $(this).addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
+            /********
             var checkbox = $('#kt_table tbody input:checkbox:checked').map(function () {
                 return $(this).val();
-            }).get();
-            if (checkbox == '') {
+            }).get(); 
+            ****/
+            
+            //nuevo checkbox
+            var checkbox = [];
+            $("input:checked", $('#kt_table').dataTable().fnGetNodes()).each(function () {
+                checkbox.push($(this).val());
+            });
+            console.log('checkbox ',checkbox);
+          
+            if (checkbox.length == 0) {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
                 var code = {ids: checkbox}
-                console.log(code);
+                console.log('code ',code);
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
                     text: 'Recuerda que no podrás revertir esto.',
@@ -94,7 +109,32 @@ var TipoDocumento = function () {
                 }).then(function (result) {
                     if (result.value) {
                         
-                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
+                        $.ajax(
+                            {
+                                url: 'http://127.0.0.1:8000/api/tipo_documento_borrar',
+                                type: 'delete', 
+                                data: code, 
+                                dataType: 'json',
+                                success: function (response)
+                                {
+                                    //response es el json devuelto por la api
+                                    $('#kt_table').DataTable().ajax.reload();
+                                    console.log('completo',response);
+                                    
+                                },
+                                error: function(xhr) {
+                                 console.log(xhr.responseText);
+                               }
+                            });
+                        
+                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success').then(()=>{
+                            //window.location.href='http://127.0.0.1:8000/tipo-documento';
+                        });
                     }
                 });
             }

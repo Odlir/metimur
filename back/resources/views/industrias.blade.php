@@ -30,7 +30,7 @@
                                                         <a href="industrias-nuevo" class="btn btn-brand btn-icon-sm">
                                                             <i class="la la-plus"></i> <span class="kt-hidden-mobile">Nuevo Registro</span>
                                                         </a>
-                                                        <button id="btn-delete2" class="btn btn-danger btn-icon-sm borrarAll" data-url="{{ route('industria.destroyMultiple') }}"><i class="flaticon-delete" ></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>
+                                                        <button id="btn-delete" class="btn btn-danger btn-icon-sm"><i class="flaticon-delete" ></i> <span class="kt-hidden-mobile">Eliminar Registro</span></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -144,11 +144,5 @@
             });   
     </script>
 
-
-    @isset($totalE)
-    <script>
-        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
-    </script>
-    @endisset
 
 @endsection
