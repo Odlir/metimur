@@ -95,6 +95,11 @@
                             </form>
                         </div>
                     </div>
+                    <div id="kt_footer" class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+                        <div class="kt-container kt-container--fluid">
+                            <div class="kt-footer__copyright">2020&nbsp;&copy;&nbsp;Effectus Fischman Consultores</div>
+                        </div>
+                    </div>
 
                 </div>
             </div>

@@ -39,9 +39,9 @@
                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                         <label>Estado:</label>
                                         <select class="form-control kt-select2" data-col-index="1">
-                                            <option value="1">Todos</option>
-                                            <option value="2">Activos</option>
-                                            <option value="3">Inactivos</option>
+                                            <option value="">Todos</option>
+                                            <option value="Activo">Activos</option>
+                                            <option value="Inactivo">Inactivos</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-3">
@@ -85,6 +85,11 @@
                         </div>
                     </div>
                 </div>
+                <div id="kt_footer" class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+                    <div class="kt-container kt-container--fluid">
+                        <div class="kt-footer__copyright">2020&nbsp;&copy;&nbsp;Effectus Fischman Consultores</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -92,11 +97,11 @@
     </div>
     </div>
     </div>
+    <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('json/categorias.json')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/categorias.js')}}"></script>
 
-    <script type="text/javascript" src="assets/plugins/global/plugins.bundle.js"></script>
-    <script type="text/javascript" src="assets/js/scripts.bundle.js"></script>
-    <script type="text/javascript" src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script type="text/javascript" src="json/categorias.json"></script>
-    <script type="text/javascript" src="assets/js/categorias.js"></script>
 @endsection

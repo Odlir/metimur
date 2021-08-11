@@ -39,7 +39,7 @@ class CategoriaController extends Controller
         //lo guardamos
         $categoria->save();
         //redirigimos a la pagina categorias
-        return redirect('/categorias');
+        return redirect()->route('categorias.main');
     }
 
     /**
@@ -75,7 +75,8 @@ class CategoriaController extends Controller
         $categoria->categoria_estado_id = $request->cboEstado;
         //lo guardamos
         $categoria->save();
-        return response()->json($categoria,200);
+        //return response()->json($categoria,200);
+        return redirect()->route('categorias.main');
     }
 
     /**
@@ -97,5 +98,11 @@ class CategoriaController extends Controller
         //eliminamos la industria
         $categoria->delete();
         return redirect('/categorias');
+    }
+
+    public function edit($id){
+        $categoria = Categoria::find($id);
+        //return $industria;
+        return view('categorias-editar',compact('categoria'));
     }
 }

@@ -40,7 +40,7 @@ class NaturalezaController extends Controller
         //lo guardamos
         $naturaleza->save();
         //redirigimos a la pagina categorias
-        return redirect('/naturaleza');
+        return redirect()->route('naturaleza.main');
     }
 
     /**
@@ -76,7 +76,8 @@ class NaturalezaController extends Controller
         $naturaleza->naturaleza_estado_id = $request->cboEstado;
         //lo guardamos
         $naturaleza->save();
-        return response()->json($naturaleza,200);
+        //return response()->json($naturaleza,200);
+        return redirect()->route('naturaleza.main');
     }
 
     /**
@@ -98,5 +99,12 @@ class NaturalezaController extends Controller
         //eliminamos la industria
         $naturaleza->delete();
         return redirect('/naturaleza');
+    }
+
+
+    public function edit($id){
+        $naturaleza = Naturaleza::find($id);
+        //return $industria;
+        return view('naturaleza-editar',compact('naturaleza'));
     }
 }

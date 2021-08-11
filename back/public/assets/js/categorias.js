@@ -14,7 +14,7 @@ var Categorias = function () {
                 {data: 'id', className: 'kt-align-center'},
                 {data: 'categoria_nombre'},
                 {data: 'categoria_usuario_modificacion_id'},
-                {data: 'categoria_usuario_modificacion_id', className: 'kt-align-center'},
+                {data: 'updated_at', className: 'kt-align-center'},
                 {data: 'categoria_estado_id', className: 'kt-align-center'},
                 {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
             ],
@@ -34,8 +34,10 @@ var Categorias = function () {
                 },{
                     targets:3,
                     render: function (data, type, full, meta) {
-                        data=data.replace("T"," ");
-                        data=data.replace(".000000Z"," ");
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
                         return data;
                     },
                 },
@@ -120,11 +122,10 @@ var Categorias = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
-                    'onClose': function (e) {
-                        $(window).attr('location', 'categorias.html');
-                    }
+                }).then(()=>{
+                    form.submit();
                 });
-                return false;
+                
             }
         });
     };

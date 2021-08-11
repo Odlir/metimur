@@ -34,8 +34,10 @@ var TipoDocumento = function () {
                 },{
                     targets:3,
                     render: function (data, type, full, meta) {
-                        data=data.replace("T"," ");
-                        data=data.replace(".000000Z"," ");
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
                         return data;
                     },
                 },
@@ -52,8 +54,11 @@ var TipoDocumento = function () {
             ],
         });
         table.on('change', '.kt-group-checkable', function () {
+            //console.log('se esta ejecutando');
             var set = $(this).closest('table').find('td:first-child .kt-checkable');
+            //console.log('set ',set);
             var checked = $(this).is(':checked');
+            //console.log(checked);
             $(set).each(function () {
                 if (checked) {
                     $(this).prop('checked', true);
@@ -65,6 +70,7 @@ var TipoDocumento = function () {
             });
         });
         table.on('change', 'tbody tr .kt-checkbox', function () {
+            console.log('segundo');
             $(this).parents('tr').toggleClass('active');
         });
     };
@@ -78,6 +84,7 @@ var TipoDocumento = function () {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
                 var code = {ids: checkbox}
+                console.log(code);
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
                     text: 'Recuerda que no podrás revertir esto.',
@@ -86,6 +93,7 @@ var TipoDocumento = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
+                        
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
                     }
                 });
@@ -120,11 +128,10 @@ var TipoDocumento = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
-                    'onClose': function (e) {
-                        $(window).attr('location', 'tipo-documento.html');
-                    }
+                }).then(()=>{
+                    form.submit();
                 });
-                return false;
+                
             }
         });
     };

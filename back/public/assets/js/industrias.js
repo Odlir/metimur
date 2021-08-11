@@ -34,18 +34,22 @@ var Industrias = function () {
                 },{
                     targets:3,
                     render: function (data, type, full, meta) {
-                        data=data.replace("T"," ");
-                        data=data.replace(".000000Z"," ");
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
                         return data;
                     },
                 },
                 {
                     targets: 4,
                     render: function (data, type, full, meta) {
+                        console.log('data ',data);
                         var status = {
                             'Activo': {'class': ' kt-badge--success'},
                             'Inactivo': {'class': ' kt-badge--danger'}
                         };
+                        console.log('statusd ',status[data]);
                         return '<span class="kt-badge ' + status[data].class + ' kt-badge--inline kt-badge--pill">' + data + '</span>';
                     },
                 }

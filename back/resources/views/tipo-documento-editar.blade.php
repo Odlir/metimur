@@ -1,18 +1,17 @@
 @extends('layouts.layout')
-@section('title', 'Industrias')
+@section('title', 'Tipo Documento')
 @section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                         <div id="kt_subheader" class="kt-subheader kt-grid__item">
                             <div class="kt-container kt-container--fluid">
                                 <div class="kt-subheader__main">
-                                    <h3 class="kt-subheader__title">Mantenimiento de Industrias</h3>
+                                    <h3 class="kt-subheader__title">Mantenimiento de Tipo de Documento</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('industria.update',$industria)}}" method="POST">
+                            <form id="kt_form" class="kt-form kt-form--fit kt-margin-b-20" action="{{route('tipo_documento.update',$tipo_documento)}}" method="POST">
                                 @csrf
-                                {{--metodo put --}}
                                 @method('put')
                                 <div class="row">
                                     <div class="col-md-12">
@@ -25,7 +24,7 @@
                                                 <div class="kt-portlet__head-toolbar">
                                                     <div class="kt-portlet__head-wrapper">
                                                         <div class="kt-portlet__head-actions">
-                                                            <a href="industrias" class="btn btn-clean kt-margin-r-10">
+                                                            <a href="tipo-documento" class="btn btn-clean kt-margin-r-10">
                                                                 <i class="la la-arrow-left"></i> <span class="kt-hidden-mobile">Regresar</span>
                                                             </a>
                                                             <button type="submit" class="btn btn-brand">
@@ -39,13 +38,13 @@
                                                 <div class="form-group row">
                                                     <div class="col-lg-8 form-group-sub">
                                                         <label>Nombre:</label>
-                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{old('industria_nombre',$industria->industria_nombre)}}">
+                                                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" value="{{old('industria_name',$tipo_documento->tipo_documento_nombre)}}">
                                                     </div>
                                                     <div class="col-lg-4 form-group-sub">
                                                         <label>Estado:</label>
                                                         <select id="cboEstado" name="cboEstado" class="form-control">
-                                                            <option value="{{old('industria_estado_id',$industria->industria_estado_id)}}">{{old('industria_estado_id',$industria->industria_estado_id)}}</option>
-                                                            @if ($industria->industria_estado_id == 'Activo')
+                                                            <option value="{{old('tipo_documento_estado_id',$tipo_documento->tipo_documento_estado_id)}}">{{old('tipo_documento_estado_id',$tipo_documento->tipo_documento_estado_id)}}</option>
+                                                            @if ($tipo_documento->tipo_documento_estado_id == 'Activo')
                                                                 <option value="Inactivo">Inactivo</option>
                                                             @else
                                                                 <option value="Activo">Activo</option>
@@ -106,6 +105,7 @@
                             <div class="kt-footer__copyright">2020&nbsp;&copy;&nbsp;Effectus Fischman Consultores</div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -116,7 +116,6 @@
         <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
         <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
         <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
-        <script type="text/javascript" src="{{asset('json/industrias.json')}}"></script>
-        <script type="text/javascript" src="{{asset('assets/js/industrias.js')}}"></script>
-
+        <script type="text/javascript" src="{{asset('json/tipo-documento.json')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/js/tipo-documento.js')}}"></script>
 @endsection

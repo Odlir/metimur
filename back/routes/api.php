@@ -56,10 +56,10 @@ Route::resource('tipo_evaluacion', TipoEvaluacionController::class);
 
 // Rutas Categoria
 
-Route::apiresource('categoria', CategoriaController::class);
+Route::resource('categoria', CategoriaController::class);
 
 // Rutas Naturaleza
-Route::apiresource('naturaleza', NaturalezaController::class);
+Route::resource('naturaleza', NaturalezaController::class);
 
 
 //Datatable

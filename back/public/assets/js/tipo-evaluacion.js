@@ -34,8 +34,10 @@ var TipoEvaluacion = function () {
                 },{
                     targets:3,
                     render: function (data, type, full, meta) {
-                        data=data.replace("T"," ");
-                        data=data.replace(".000000Z"," ");
+                        if(data!=null){
+                            data=data.replace("T"," ");
+                            data=data.replace(".000000Z"," ");
+                        }
                         return data;
                     },
                 },
@@ -120,11 +122,10 @@ var TipoEvaluacion = function () {
                     'text': 'Registro guardado correctamente',
                     'type': 'success',
                     'confirmButtonClass': 'btn btn-secondary',
-                    'onClose': function (e) {
-                        $(window).attr('location', 'tipo-evaluacion.html');
-                    }
+                }).then(()=>{
+                    form.submit();
                 });
-                return false;
+                
             }
         });
     };
