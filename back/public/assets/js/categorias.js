@@ -9,7 +9,7 @@ var Categorias = function () {
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
 
-            serverSide: true,
+           /* serverSide: true,*/
 	        ajax:"http://127.0.0.1:8000/api/categorias_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -98,6 +98,7 @@ var Categorias = function () {
                 }).then(function (result) {
                     if (result.value) {
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+
                     }
                 });
             }

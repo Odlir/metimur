@@ -8,7 +8,7 @@ var Industrias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-            serverSide: true,
+           /* serverSide: false,*/
 	        ajax:"http://127.0.0.1:8000/api/industrias_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -55,6 +55,7 @@ var Industrias = function () {
                 }
             ],
         });
+        /*Checks x td pagina*/
         table.on('change', '.kt-group-checkable', function () {
             var set = $(this).closest('table').find('td:first-child .kt-checkable');
             var checked = $(this).is(':checked');
@@ -68,6 +69,7 @@ var Industrias = function () {
                 }
             });
         });
+        /*Checks x id*/
         table.on('change', 'tbody tr .kt-checkbox', function () {
             $(this).parents('tr').toggleClass('active');
         });
@@ -105,8 +107,8 @@ var Industrias = function () {
                             type: 'DELETE',
                             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                             data: 'ids=' + unir_arrays_seleccionados,
-                            success: function (data) {           
-                            
+                            success: function (data) {
+
                                 if (data['msjtotal'] ) {
                                 $.each(idsArray,function(indice,id) {
                                     var fila = $("#" + id).remove(); //Oculto las filas eliminadas
@@ -120,10 +122,10 @@ var Industrias = function () {
                             error: function (data) {
                                 alert(data.responseText);
                             }
-                   
+
                         });
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
-                        
+
                     }
                 });
             }
@@ -160,7 +162,7 @@ var Industrias = function () {
                 }).then(()=>{
                     form.submit();
                 });
-                
+
             }
             /**
             submitHandler: function (form) {

@@ -49,8 +49,8 @@
                                                                 <option value="Inactivo">Inactivo</option>
                                                             @else
                                                                 <option value="Activo">Activo</option>
-                                                            @endif                                                               
-                                    
+                                                            @endif
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -101,14 +101,7 @@
                             </form>
                         </div>
                     </div>
-                    <div id="kt_footer" class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
-                        <div class="kt-container kt-container--fluid">
-                            <div class="kt-footer__copyright">2020&nbsp;&copy;&nbsp;Effectus Fischman Consultores</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div id="kt_scrolltop" class="kt-scrolltop">
             <i class="fa fa-arrow-up"></i>
         </div>

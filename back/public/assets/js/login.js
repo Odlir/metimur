@@ -42,7 +42,7 @@ var Login = function () {
             var form = $(this).closest('form');
             form.validate({
                 rules: {
-                    usuario: {
+                    email: {
                         required: true
                     },
                     password: {
@@ -55,13 +55,17 @@ var Login = function () {
             }
             btn.addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
             form.ajaxSubmit({
-                url: '',
+                url: 'api/authenticate',
+                type:"POST",
                 success: function (response, status, xhr, $form) {
+                    location.href = "/dashboard";
+                },
+                error : function(xhr, status) {
                     setTimeout(function () {
                         btn.removeClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', false);
                         showErrorMsg(form, 'danger', 'Usuario o Contraseña incorrectas.');
                     }, 2000);
-                }
+                },
             });
         });
     };

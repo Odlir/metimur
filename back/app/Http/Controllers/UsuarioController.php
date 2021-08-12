@@ -95,12 +95,9 @@ class UsuarioController extends Controller
         $credentials = request()->only('email','password');
         if(Auth::attempt($credentials)){
 
-            return redirect('dashboard');
-
+            return redirect()->route('dashboard.main');
         }
-        return redirect('/');
-
-
+        return redirect()->route('/');
     }
 
     public function logout( Request $request)
@@ -114,4 +111,5 @@ class UsuarioController extends Controller
 
         return redirect('/');
     }
+
 }

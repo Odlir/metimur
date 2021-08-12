@@ -34,7 +34,7 @@
                                     <h3 class="kt-login__title">Iniciara Sesión</h3>
                                 </div>
                                 <div class="kt-login__form">
-                                    <form id="frmLogin" class="kt-form" method="POST" action="{{route('authenticate.auth')}}" >
+                                    <form id="frmLogin" class="kt-form" {{--method="POST" --}}{{--action="{{route('authenticate.auth')}}"--}} >
                                         @csrf
                                         <div class="form-group">
                                             <input class="form-control" type="text" placeholder="Usuario" id="email" name="email"  autocomplete="off">
@@ -46,7 +46,7 @@
                                             <a href="javascript:;" id="kt_login_forgot">¿Olvidaste tu contraseña?</a>
                                         </div>
                                         <div class="kt-login__actions">
-                                            <button {{--id="kt_login_signin_submit" --}}class="btn btn-brand btn-pill btn-elevate"  type="submit">Ingresar</button>
+                                            <button id="kt_login_signin_submit" class="btn btn-brand btn-pill btn-elevate"  {{--type="submit"--}}>Ingresar</button>
                                         </div>
                                     </form>
                                 </div>

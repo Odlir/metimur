@@ -32,7 +32,7 @@ Route::resource('user', UserController::class);
 
 Route::apiresource('usuario', UsuarioController::class);
 Route::post('authenticate', [UsuarioController::class, 'authenticate'])->name('authenticate.auth');
-Route::post('logout', [UsuarioController::class, 'logout'])->name('usuario.logout');
+/*Route::post('logout', [UsuarioController::class, 'logout'])->name('usuario.logout');*/
 
 
 //Rutas de industria
@@ -60,13 +60,12 @@ Route::resource('tipo_evaluacion', TipoEvaluacionController::class);
 Route::resource('categoria', CategoriaController::class);
 
 
-Route::get('edit/{id}', [CategoriaController::class,'edit'])->name('categoria.edit');
+/*Route::get('edit/{id}', [CategoriaController::class,'edit'])->name('categoria.edit');*/
 
 // Rutas Naturaleza
 
-Route::apiresource('naturaleza', NaturalezaController::class);
-
-Route::get('naturaleza/edit/{id}', [NaturalezaController::class,'edit'])->name('naturaleza.edit');
+/*
+Route::get('naturaleza/edit/{id}', [NaturalezaController::class,'edit'])->name('naturaleza.edit');*/
 
 Route::resource('naturaleza', NaturalezaController::class);
 
