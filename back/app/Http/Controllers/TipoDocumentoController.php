@@ -84,4 +84,16 @@ class TipoDocumentoController extends Controller
         //return $tipo_documento;
         return view('tipo-documento-editar',compact('tipo_documento'));
     }
+
+
+    public function destroyMultiple(Request $request){
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $tipo_documento = tipo_documento::find($item);
+            $tipo_documento->delete();
+        }
+        return response()->json($arreglo,200);
+        //return redirect()->route('tipo_documento.main');
+    }
 }

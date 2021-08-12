@@ -1,4 +1,9 @@
 @extends('layouts.layout')
+
+@section('head')
+    <meta name="csrf-token" content="{{ csrf_token() }}"> <!----Creando mi Token --->
+@endsection
+
 @section('title', 'Tipo Documento')
 @section('content')
                     <div id="kt_content" class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
@@ -39,9 +44,9 @@
                                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Estado:</label>
                                                         <select class="form-control kt-select2" data-col-index="1">
-                                                            <option value="1">Todos</option>
-                                                            <option value="2">Activos</option>
-                                                            <option value="3">Inactivos</option>
+                                                            <option value="">Todos</option>
+                                                            <option value="Activo">Activos</option>
+                                                            <option value="Inactivo">Inactivos</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3">

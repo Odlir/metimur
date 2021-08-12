@@ -108,4 +108,15 @@ class NaturalezaController extends Controller
         //return $industria;
         return view('naturaleza-editar',compact('naturaleza'));
     }
+
+    public function destroyMultiple(Request $request){
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $Naturaleza = Naturaleza::find($item);
+            $Naturaleza->delete();
+        }
+        return response()->json($Naturaleza,200);
+        //return redirect()->route('tipo_documento.main');
+    }
 }

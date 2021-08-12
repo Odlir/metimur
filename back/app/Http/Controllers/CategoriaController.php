@@ -78,7 +78,7 @@ class CategoriaController extends Controller
         //lo guardamos
         $categoria->save();
 
-        return redirect('/categorias');
+  /*      return redirect('/categorias');*/
 
         //return response()->json($categoria,200);
         return redirect()->route('categorias.main');
@@ -111,4 +111,16 @@ class CategoriaController extends Controller
         //return $industria;
         return view('categorias-editar',compact('categoria'));
     }
+
+    public function destroyMultiple(Request $request){
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $Categoria = Categoria::find($item);
+            $Categoria->delete();
+        }
+        return response()->json($Categoria,200);
+        //return redirect()->route('tipo_documento.main');
+    }
+
 }

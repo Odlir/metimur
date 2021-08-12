@@ -43,21 +43,25 @@ Route::get('industrias/{id}', [IndustriaController::class,'show'])->name('indust
 Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->name('industria.update');
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
 Route::get('industrias/{id}/edit', [IndustriaController::class,'edit'])->name('industria.edit');
-Route::delete('industrias/deletemultiple', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
+Route::delete('industria_borrar', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
+//Route::delete('industrias/deletemultiple', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
 
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
 
 Route::post('industrias/search', [IndustriaController::class,'search'])->name('industria.search');
 
+//Rutas tipo_documento
 Route::resource('tipo_documento', TipoDocumentoController::class);
+Route::delete('tipo_documento_borrar', [TipoDocumentoController::class,'destroyMultiple'])->name('tipo_documento.destroyMultiple');
 
+//Rutas tipo_evaluacion
 Route::resource('tipo_evaluacion', TipoEvaluacionController::class);
-
+Route::delete('tipo_evaluacion_borrar', [TipoEvaluacionController::class,'destroyMultiple'])->name('tipo_evaluacion.destroyMultiple');
 
 // Rutas Categoria
-
 Route::resource('categoria', CategoriaController::class);
+Route::delete('categoria_borrar', [CategoriaController::class,'destroyMultiple'])->name('categoria.destroyMultiple');
 
 
 /*Route::get('edit/{id}', [CategoriaController::class,'edit'])->name('categoria.edit');*/
@@ -68,7 +72,7 @@ Route::resource('categoria', CategoriaController::class);
 Route::get('naturaleza/edit/{id}', [NaturalezaController::class,'edit'])->name('naturaleza.edit');*/
 
 Route::resource('naturaleza', NaturalezaController::class);
-
+Route::delete('naturaleza_borrar', [NaturalezaController::class,'destroyMultiple'])->name('naturaleza.destroyMultiple');
 
 //Datatable
 

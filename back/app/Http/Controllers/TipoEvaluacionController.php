@@ -88,4 +88,14 @@ class TipoEvaluacionController extends Controller
         return view('tipo-evaluacion-editar',compact('tipo_evaluacion'));
     }
 
+    public function destroyMultiple(Request $request){
+        $arreglo = $request->ids;
+        //return response()->json($arreglo,200);
+        foreach($arreglo as $item){
+            $tipo_evaluacion = tipo_evaluacion::find($item);
+            $tipo_evaluacion->delete();
+        }
+        return response()->json($arreglo,200);
+    }
+
 }

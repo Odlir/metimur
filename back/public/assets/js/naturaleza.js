@@ -1,6 +1,6 @@
 'use strict';
 var Naturaleza = function () {
-
+    var dataJSONArray = dataJSON;
     var handleDataTable = function () {
         var table = $('#kt_table').DataTable({
             language: {
@@ -8,8 +8,6 @@ var Naturaleza = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-
-            serverSide: true,
 	        ajax:"http://127.0.0.1:8000/api/naturalezas_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -19,7 +17,6 @@ var Naturaleza = function () {
                 {data: 'naturaleza_estado_id', className: 'kt-align-center'},
                 {data: 'btn', className: 'kt-align-center', responsivePriority: -1},
             ],
-
             order: [[1, 'asc']],
             headerCallback: function (thead, data, start, end, display) {
                 thead.getElementsByTagName('th')[0].innerHTML = '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="" class="kt-group-checkable"><span></span></label>';
@@ -33,13 +30,6 @@ var Naturaleza = function () {
                     render: function (data, type, full, meta) {
                         return '<label class="kt-checkbox kt-checkbox--single"><input type="checkbox" value="' + data + '" class="kt-checkable"><span></span></label>';
                     },
-
-                },
-                {
-                    targets: -1,
-                    title: 'Actions',
-                    orderable: false,
-
                 },{
                     targets:3,
                     render: function (data, type, full, meta) {
@@ -82,9 +72,13 @@ var Naturaleza = function () {
     var handleDelete = function () {
         $('#btn-delete').click(function () {
             $(this).addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
-            var checkbox = $('#kt_table tbody input:checkbox:checked').map(function () {
-                return $(this).val();
-            }).get();
+
+            //nuevo checkbox
+            var checkbox = [];
+            $("input:checked", $('#kt_table').dataTable().fnGetNodes()).each(function () {
+                checkbox.push($(this).val());
+            });
+
             if (checkbox == '') {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
@@ -97,7 +91,31 @@ var Naturaleza = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
-                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
+                        $.ajax(
+                            {
+                                url: 'http://127.0.0.1:8000/api/naturaleza_borrar',
+                                type: 'delete',
+                                data: code,
+                                dataType: 'json',
+                                success: function (response)
+                                {
+                                    //console.log(response); // see the reponse sent
+                                    $('#kt_table').DataTable().ajax.reload();
+                                    console.log('completo');
+
+                                },
+                                error: function(xhr) {
+                                 console.log(xhr.responseText);
+                               }
+                        });
+                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success').then(()=>{
+                            //window.location.href='http://127.0.0.1:8000/naturaleza';
+                        });
                     }
                 });
             }

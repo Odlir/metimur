@@ -8,7 +8,6 @@ var Industrias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-           /* serverSide: false,*/
 	        ajax:"http://127.0.0.1:8000/api/industrias_dt",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
@@ -55,7 +54,6 @@ var Industrias = function () {
                 }
             ],
         });
-        /*Checks x td pagina*/
         table.on('change', '.kt-group-checkable', function () {
             var set = $(this).closest('table').find('td:first-child .kt-checkable');
             var checked = $(this).is(':checked');
@@ -69,22 +67,26 @@ var Industrias = function () {
                 }
             });
         });
-        /*Checks x id*/
         table.on('change', 'tbody tr .kt-checkbox', function () {
             $(this).parents('tr').toggleClass('active');
         });
     };
     var handleDelete = function () {
         $('#btn-delete').click(function () {
+
             $(this).addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
-            var checkbox = $('#kt_table tbody input:checkbox:checked').map(function () {
-                return $(this).val();
-            }).get();
+
+            //nuevo checkbox
+            var checkbox = [];
+            $("input:checked", $('#kt_table').dataTable().fnGetNodes()).each(function () {
+                checkbox.push($(this).val());
+            });
+
             if (checkbox == '') {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
-
                 var code = {ids: checkbox}
+                console.log('code ',code);
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
                     text: 'Recuerda que no podrás revertir esto.',
@@ -93,39 +95,33 @@ var Industrias = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
-                        var idsArray = [];
-                        $("input:checkbox[class=delete_checkbox]:checked").each(function () {
-                            idsArray.push($(this).attr('data-id'));
-                            console.log('object');
-                        });
-                        console.log(idsArray);
-                        var unir_arrays_seleccionados = idsArray.join(",");
-                        console.log(unir_arrays_seleccionados);
-                        return false;
-                        $.ajax({
-                            url: 'http://127.0.0.1:8000/api/industrias/deletemulti',
-                            type: 'DELETE',
-                            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                            data: 'ids=' + unir_arrays_seleccionados,
-                            success: function (data) {
-
-                                if (data['msjtotal'] ) {
-                                $.each(idsArray,function(indice,id) {
-                                    var fila = $("#" + id).remove(); //Oculto las filas eliminadas
-                                    console.log('indice: ' + indice + ' - - ' + 'id:' + id);
-                                });
-                                    //alert(data['mensaje']);
-                                }else {
-                                    console.log('Error, no se Eliminaron las industrias .. ' + data['error']);
-                                }
-                            },
-                            error: function (data) {
-                                alert(data.responseText);
+                        console.log('code dentro then ',code);
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                             }
-
                         });
-                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
+                        $.ajax(
+                            {
+                                url: 'http://127.0.0.1:8000/api/industria_borrar',
+                                type: 'delete',
+                                data: code,
+                                dataType: 'json',
+                                success: function (response)
+                                {
+                                    //console.log(response); // see the reponse sent
+                                    $('#kt_table').DataTable().ajax.reload();
+                                    console.log('completo');
 
+                                },
+                                error: function(xhr) {
+                                 console.log(xhr.responseText);
+                               }
+                            });
+
+                        swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success').then(()=>{
+                            //window.location.href='http://127.0.0.1:8000/industrias';
+                        });
                     }
                 });
             }
