@@ -43,7 +43,7 @@ Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->nam
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
 Route::get('industrias/{id}/edit', [IndustriaController::class,'edit'])->name('industria.edit');
 Route::delete('industria_borrar', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
-//Route::delete('industrias/deletemultiple', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
+
 
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
@@ -73,4 +73,6 @@ Route::get('tipo_evaluacion_dt', [Datatable::class,'tipo_evaluacion']);
 Route::get('naturalezas_dt', [Datatable::class,'naturaleza']);
 Route::get('categorias_dt', [Datatable::class,'categoria']);
 Route::get('industrias_dt', [Datatable::class,'industria']);
+
+Route::get('industrias_dt2', [Datatable::class,'industria2']);
 

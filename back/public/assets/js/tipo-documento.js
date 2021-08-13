@@ -175,11 +175,59 @@ var TipoDocumento = function () {
             }
         });
     };
+    var busqueda = function (){
+
+        $('#kt_search').on( 'click', function (event) {
+            event.preventDefault();
+            console.log('busqueda');
+            var request = [];
+            request.push($('#txtNombre').val());
+            request.push($('#indEstado').val());
+            var code = {ids: request}
+            console.log('code: ',code);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax(
+                {
+                    url: 'http://127.0.0.1:8000/api/tipo_documento_dt',
+                    type: 'GET', 
+                    data: code, 
+                    dataType: 'json',
+                    success: function (response)
+                    {
+                        console.log(response);
+                        $('#kt_table').DataTable().clear().draw();
+                        $('#kt_table').DataTable().rows.add(response.data).draw();    
+                  
+                    },
+                    error: function(xhr) {
+                     console.log(xhr.responseText);
+                   }
+                });     
+        } );
+
+        $('#kt_reset').on( 'click', function (event) {
+            event.preventDefault();
+            $("#form_busqueda")[0].reset();//limpiar los input del form
+            $('#indEstado').prop('selectedIndex',0);//cambia el index a 0 
+            $('.kt-select2').select2({
+                placeholder: 'SELECCIONAR',
+                allowClear: true
+            });//cambia el placeholder
+            $('#kt_table').DataTable().ajax.reload();//recarga la tabla
+        });
+
+
+    };
     return {
         init: function () {
             handleDataTable();
             handleDelete();
             handleForm();
+            busqueda();
         }
     };
 }();

@@ -36,23 +36,23 @@
                                             </div>
                                         </div>
                                         <div class="kt-portlet__body">
-                                            <form class="kt-form kt-form--fit kt-margin-b-20">
+                                            <form class="kt-form kt-form--fit kt-margin-b-20" id="form_busqueda">
                                                 @csrf
                                                 <div class="row kt-margin-b-20 align-items-center">
                                                     <div class="col-lg-6 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Nombre:</label>
-                                                        <input type="text" class="form-control kt-input" data-col-index="0" id="txtNombre" name="txtNombre">
+                                                        <input type="text" class="form-control kt-input column_filter" data-col-index="1" id="txtNombre" name="txtNombre">
                                                     </div>
                                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Estado:</label>
-                                                        <select id="indEstado" name="indEstado" class="form-control kt-select2" data-col-index="1">
+                                                        <select id="indEstado" name="indEstado" class="form-control kt-select2 column_filter" data-col-index="4">
                                                             <option value="">Todos</option>
                                                             <option value="Activo">Activos</option>
                                                             <option value="Inactivo">Inactivos</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3">
-                                                        <button id="kt_search" class="btn btn-brand btn-brand--icon">
+                                                        <button id="kt_search" class="btn btn-brand btn-brand--icon ">
                                                             <span><i class="la la-search"></i> <span>Buscar</span></span>
                                                         </button>
                                                         &nbsp;&nbsp;
@@ -114,35 +114,6 @@
         <script type="text/javascript" src="{{asset('json/industrias.json')}}"></script>
         <script type="text/javascript" src="{{asset('assets/js/industrias.js')}}"></script>
 
-
-    <script type="text/javascript">
-            $('.borrarAll').on('click', function(e) {
-                var idsArray = [];
-                $("input[type=checkbox]:checked").each(function () {
-                    idsArray.push($(this).attr('data-id'));
-                });
-                console.log(idsArray);
-                var unir_arrays_seleccionados = idsArray.join(",");
-                console.log(unir_arrays_seleccionados);
-                if(idsArray.length > 0){
-                    $.ajax({
-                        url: $(this).data('url'),
-                        type: 'DELETE',
-                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                        data: 'ids=' + unir_arrays_seleccionados,
-                        success: function (data) {
-                            window.location.replace("http://127.0.0.1:8000/industrias");
-                        },
-                        error: function (data) {
-                        alert(data.responseText);
-                        }      
-                    });
-                    swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success');
-                }else{
-                    swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
-                }
-            });   
-    </script>
 
 
 @endsection

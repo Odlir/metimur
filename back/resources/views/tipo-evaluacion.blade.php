@@ -35,18 +35,18 @@
                                             </div>
                                         </div>
                                         <div class="kt-portlet__body">
-                                            <form class="kt-form kt-form--fit kt-margin-b-20">
+                                            <form class="kt-form kt-form--fit kt-margin-b-20" id="form_busqueda">
                                                 <div class="row kt-margin-b-20 align-items-center">
                                                     <div class="col-lg-6 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Nombre:</label>
-                                                        <input type="text" class="form-control kt-input" data-col-index="0">
+                                                        <input type="text" class="form-control kt-input" data-col-index="0" id="txtNombre" name="txtNombre">
                                                     </div>
                                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                                         <label>Estado:</label>
-                                                        <select class="form-control kt-select2" data-col-index="1">
-                                                            <option value="1">Todos</option>
-                                                            <option value="2">Activos</option>
-                                                            <option value="3">Inactivos</option>
+                                                        <select id="indEstado" name="indEstado" class="form-control kt-select2" data-col-index="1">
+                                                            <option value="">Todos</option>
+                                                            <option value="Activo">Activos</option>
+                                                            <option value="Inactivo">Inactivos</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3">

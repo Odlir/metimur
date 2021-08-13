@@ -8,7 +8,7 @@ var Industrias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-	        ajax:"http://127.0.0.1:8000/api/industrias_dt",
+	        ajax:"http://127.0.0.1:8000/api/industrias_dt2",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
                 {data: 'industria_nombre'},
@@ -43,12 +43,12 @@ var Industrias = function () {
                 {
                     targets: 4,
                     render: function (data, type, full, meta) {
-                        console.log('data ',data);
+                        //console.log('data ',data);
                         var status = {
                             'Activo': {'class': ' kt-badge--success'},
                             'Inactivo': {'class': ' kt-badge--danger'}
                         };
-                        console.log('statusd ',status[data]);
+                        //console.log('statusd ',status[data]);
                         return '<span class="kt-badge ' + status[data].class + ' kt-badge--inline kt-badge--pill">' + data + '</span>';
                     },
                 }
@@ -86,7 +86,7 @@ var Industrias = function () {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
                 var code = {ids: checkbox}
-                console.log('code ',code);
+                //console.log('code ',code);
                 swal.fire({
                     title: '¿Desea eliminar registro(s)?',
                     text: 'Recuerda que no podrás revertir esto.',
@@ -95,7 +95,7 @@ var Industrias = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
-                        console.log('code dentro then ',code);
+                        //console.log('code dentro then ',code);
                         $.ajaxSetup({
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -176,11 +176,59 @@ var Industrias = function () {
             */
         });
     };
+    var busqueda = function (){
+
+        $('#kt_search').on( 'click', function (event) {
+            event.preventDefault();
+            console.log('busqueda');
+            var request = [];
+            request.push($('#txtNombre').val());
+            request.push($('#indEstado').val());
+            var code = {ids: request}
+            console.log('code: ',code);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax(
+                {
+                    url: 'http://127.0.0.1:8000/api/industrias_dt2',
+                    type: 'GET', 
+                    data: code, 
+                    dataType: 'json',
+                    success: function (response)
+                    {
+                        $('#kt_table').DataTable().clear().draw();
+                        $('#kt_table').DataTable().rows.add(response.data).draw();    
+                  
+                    },
+                    error: function(xhr) {
+                     console.log(xhr.responseText);
+                   }
+                });     
+        } );
+
+        $('#kt_reset').on( 'click', function (event) {
+            event.preventDefault();
+            $("#form_busqueda")[0].reset();//limpiar los input del form
+            $('#indEstado').prop('selectedIndex',0);//cambia el index a 0 
+            $('.kt-select2').select2({
+                placeholder: 'SELECCIONAR',
+                allowClear: true
+            });//cambia el placeholder
+            $('#kt_table').DataTable().ajax.reload();//recarga la tabla
+        });
+
+
+    };
+
     return {
         init: function () {
             handleDataTable();
             handleDelete();
             handleForm();
+            busqueda();
         }
     };
 }();

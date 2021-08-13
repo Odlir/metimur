@@ -12,7 +12,7 @@ class IndustriaController extends Controller
     {
         $industrias = industria::all();
         return response()->json($industrias,200);
-
+        
 
     }
 
@@ -112,19 +112,7 @@ class IndustriaController extends Controller
         $query = industria::offset($offset*$limit)->take($limit)->get();
         return response()->json($query,200);
     }
-
-
-    public function search(Request $request){
-        $request->validate([
-            'indEstado' => 'required'
-        ]);
-
-        $industrias = industria::where('industria_estado_id','=',$request->indEstado)->get();
-        //return view('industrias',compact('industrias'));
-        return redirect()->route('industrias.main',compact('industrias'));
-    }
-
-    
+  
 
     public function destroyMultiple(Request $request){
         $arreglo = $request->ids;
