@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\DB;
 class CategoriaController extends Controller
 {
     /**
@@ -11,10 +12,11 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $data = Categoria::all();
         return response()->json($data);
+
     }
 
     /**
@@ -78,9 +80,6 @@ class CategoriaController extends Controller
         //lo guardamos
         $categoria->save();
 
-  /*      return redirect('/categorias');*/
-
-        //return response()->json($categoria,200);
         return redirect()->route('categorias.main');
 
     }

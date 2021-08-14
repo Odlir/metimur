@@ -8,7 +8,7 @@ var Categorias = function () {
             },
             responsive: true,
             dom: "<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
-	        ajax:"http://127.0.0.1:8000/api/categorias_dt",
+	        ajax:"http://127.0.0.1:8000/api/categorias_dt2",
             columns: [
                 {data: 'id', className: 'kt-align-center'},
                 {data: 'categoria_nombre'},

@@ -45,6 +45,17 @@ class Datatable extends Controller
         ->rawColumns(['btn'])
         ->toJson();
     }
+    public function categoria2(Request $request){
+        $nombre=$request-> txtNombre;
+        $estado=$request-> cboEstado;
+
+        return datatables()
+            ->of (categoria::where('categoria_nombre','LIKE',"%$nombre%")->where('categoria_estado_id','LIKE',"%$estado%")->get())
+            ->addColumn('btn','botones.categoria-btn')
+            ->rawColumns(['btn'])
+            ->toJson();
+
+    }
 
     public function naturaleza(){
         return datatables()
