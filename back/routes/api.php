@@ -32,7 +32,6 @@ Route::resource('user', UserController::class);
 
 Route::apiresource('usuario', UsuarioController::class);
 Route::post('authenticate', [UsuarioController::class, 'authenticate'])->name('authenticate.auth');
-/*Route::post('logout', [UsuarioController::class, 'logout'])->name('usuario.logout');*/
 
 
 //Rutas de industria
@@ -44,7 +43,7 @@ Route::put('industrias/update/{id}', [IndustriaController::class,'update'])->nam
 Route::delete('industrias/delete/{id}', [IndustriaController::class,'destroy'])->name('industria.destroy');
 Route::get('industrias/{id}/edit', [IndustriaController::class,'edit'])->name('industria.edit');
 Route::delete('industria_borrar', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
-//Route::delete('industrias/deletemultiple', [IndustriaController::class,'destroyMultiple'])->name('industria.destroyMultiple');
+
 
 
 Route::get('industria-paginate/{request}', [IndustriaController::class,'paginate'])->name('industria.paginate');
@@ -63,14 +62,7 @@ Route::delete('tipo_evaluacion_borrar', [TipoEvaluacionController::class,'destro
 Route::resource('categoria', CategoriaController::class);
 Route::delete('categoria_borrar', [CategoriaController::class,'destroyMultiple'])->name('categoria.destroyMultiple');
 
-
-/*Route::get('edit/{id}', [CategoriaController::class,'edit'])->name('categoria.edit');*/
-
 // Rutas Naturaleza
-
-/*
-Route::get('naturaleza/edit/{id}', [NaturalezaController::class,'edit'])->name('naturaleza.edit');*/
-
 Route::resource('naturaleza', NaturalezaController::class);
 Route::delete('naturaleza_borrar', [NaturalezaController::class,'destroyMultiple'])->name('naturaleza.destroyMultiple');
 
@@ -80,7 +72,11 @@ Route::get('tipo_documento_dt', [Datatable::class,'tipo_documento']);
 Route::get('tipo_evaluacion_dt', [Datatable::class,'tipo_evaluacion']);
 Route::get('naturalezas_dt', [Datatable::class,'naturaleza']);
 Route::get('categorias_dt', [Datatable::class,'categoria']);
-Route::get('categorias_dt2', [Datatable::class,'categoria2']);
 Route::get('industrias_dt', [Datatable::class,'industria']);
 
+Route::get('industrias_dt2', [Datatable::class,'industria2']);
+Route::get('categorias_dt2', [Datatable::class,'categoria2']);
+Route::get('naturalezas_dt2', [Datatable::class,'naturaleza2']);
+Route::get('tipo_documento_dt2', [Datatable::class,'tipo_documento2']);
+Route::get('tipo_evaluacion_dt2', [Datatable::class,'tipo_evaluacion2']);
 

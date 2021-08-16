@@ -35,15 +35,15 @@
                             </div>
                         </div>
                         <div class="kt-portlet__body">
-                            <form class="kt-form kt-form--fit kt-margin-b-20" >
+                            <form class="kt-form kt-form--fit kt-margin-b-20" id="form_busqueda">
                                 <div class="row kt-margin-b-20 align-items-center">
                                     <div class="col-lg-6 kt-margin-b-10-tablet-and-mobile">
                                         <label>Nombre:</label>
-                                        <input type="text" class="form-control kt-input" data-col-index="0" id="txtNombre" name="txtNombre" >
+                                        <input type="text" class="form-control kt-input" data-col-index="0" id="txtNombre" name="txtNombre">
                                     </div>
                                     <div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
                                         <label>Estado:</label>
-                                        <select class="form-control kt-select2" data-col-index="1" id="cboEstado" name="cboEstado">
+                                        <select id="indEstado" name="indEstado" class="form-control kt-select2" data-col-index="1">
                                             <option value="">Todos</option>
                                             <option value="Activo">Activos</option>
                                             <option value="Inactivo">Inactivos</option>
@@ -52,7 +52,6 @@
                                     <div class="col-lg-3">
                                         <button id="kt_search" class="btn btn-brand btn-brand--icon">
                                             <span><i class="la la-search"></i> <span>Buscar</span></span>
-                                            <input type="submit" value="Buscar">
                                         </button>
                                         &nbsp;&nbsp;
                                         <button id="kt_reset" class="btn btn-secondary btn-secondary--icon">
@@ -97,11 +96,11 @@
     </div>
 
 
-    <script type="text/javascript" src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
-     <script type="text/javascript" src="{{ asset('json/categorias.json') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/categorias.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('json/categorias.json')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/categorias.js')}}"></script>
 
 @endsection

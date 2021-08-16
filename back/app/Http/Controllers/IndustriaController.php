@@ -114,18 +114,6 @@ class IndustriaController extends Controller
     }
 
 
-    public function search(Request $request){
-        $request->validate([
-            'indEstado' => 'required'
-        ]);
-
-        $industrias = industria::where('industria_estado_id','=',$request->indEstado)->get();
-        //return view('industrias',compact('industrias'));
-        return redirect()->route('industrias.main',compact('industrias'));
-    }
-
-
-
     public function destroyMultiple(Request $request){
         $arreglo = $request->ids;
         //return response()->json($arreglo,200);

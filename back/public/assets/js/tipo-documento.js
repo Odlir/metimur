@@ -80,21 +80,21 @@ var TipoDocumento = function () {
     };
     var handleDelete = function () {
         $('#btn-delete').click(function () {
-            
+
             $(this).addClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', true);
             /********
             var checkbox = $('#kt_table tbody input:checkbox:checked').map(function () {
                 return $(this).val();
-            }).get(); 
+            }).get();
             ****/
-            
+
             //nuevo checkbox
             var checkbox = [];
             $("input:checked", $('#kt_table').dataTable().fnGetNodes()).each(function () {
                 checkbox.push($(this).val());
             });
             console.log('checkbox ',checkbox);
-          
+
             if (checkbox.length == 0) {
                 swal.fire('Un momento...', 'Debe seleccionar 1 registro para eliminar');
             } else {
@@ -108,7 +108,7 @@ var TipoDocumento = function () {
                     confirmButtonText: 'Sí, eliminar'
                 }).then(function (result) {
                     if (result.value) {
-                        
+
                         $.ajaxSetup({
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -117,21 +117,21 @@ var TipoDocumento = function () {
                         $.ajax(
                             {
                                 url: 'http://127.0.0.1:8000/api/tipo_documento_borrar',
-                                type: 'delete', 
-                                data: code, 
+                                type: 'delete',
+                                data: code,
                                 dataType: 'json',
                                 success: function (response)
                                 {
                                     //response es el json devuelto por la api
                                     $('#kt_table').DataTable().ajax.reload();
                                     console.log('completo',response);
-                                    
+
                                 },
                                 error: function(xhr) {
                                  console.log(xhr.responseText);
                                }
                             });
-                        
+
                         swal.fire('Eliminado!', 'Registro(s) eliminado(s) correctamente.', 'success').then(()=>{
                             //window.location.href='http://127.0.0.1:8000/tipo-documento';
                         });
@@ -171,15 +171,63 @@ var TipoDocumento = function () {
                 }).then(()=>{
                     form.submit();
                 });
-                
+
             }
         });
+    };
+    var busqueda = function (){
+
+        $('#kt_search').on( 'click', function (event) {
+            event.preventDefault();
+            console.log('busqueda');
+            var request = [];
+            request.push($('#txtNombre').val());
+            request.push($('#indEstado').val());
+            var code = {ids: request}
+            console.log('code: ',code);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax(
+                {
+                    url: 'http://127.0.0.1:8000/api/tipo_documento_dt2',
+                    type: 'GET',
+                    data: code,
+                    dataType: 'json',
+                    success: function (response)
+                    {
+                        console.log(response);
+                        $('#kt_table').DataTable().clear().draw();
+                        $('#kt_table').DataTable().rows.add(response.data).draw();
+
+                    },
+                    error: function(xhr) {
+                     console.log(xhr.responseText);
+                   }
+                });
+        } );
+
+        $('#kt_reset').on( 'click', function (event) {
+            event.preventDefault();
+            $("#form_busqueda")[0].reset();//limpiar los input del form
+            $('#indEstado').prop('selectedIndex',0);//cambia el index a 0
+            $('.kt-select2').select2({
+                placeholder: 'SELECCIONAR',
+                allowClear: true
+            });//cambia el placeholder
+            $('#kt_table').DataTable().ajax.reload();//recarga la tabla
+        });
+
+
     };
     return {
         init: function () {
             handleDataTable();
             handleDelete();
             handleForm();
+            busqueda();
         }
     };
 }();
